@@ -8,25 +8,23 @@
 
 #import "GPMainViewController.h"
 
-@interface GPMainViewController ()
-
-@end
-
 @implementation GPMainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize helloLabel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    helloLabel = [[UILabel alloc] init];
+    helloLabel.text = @"Hello world!";
+    helloLabel.font = [UIFont systemFontOfSize:36.0];
+    [self.view addSubview:helloLabel];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    helloLabel.frame = CGRectMake(100, 10, 320, 26);
 }
 
 - (void)didReceiveMemoryWarning

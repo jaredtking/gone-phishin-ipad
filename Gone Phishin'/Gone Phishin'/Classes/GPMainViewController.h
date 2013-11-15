@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface GPMainViewController : UIViewController
+{
+    
+}
+
+@property (strong, nonatomic) UILabel *helloLabel;
 
 @end
