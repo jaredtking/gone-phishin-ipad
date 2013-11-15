@@ -17,6 +17,7 @@
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
 		7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
+		7DAA617B1836BA45001AFBDF /* GPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gone Phishin'-Info.plist"; sourceTree = "<group>"; };
 		7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gone Phishin'-Prefix.pch"; sourceTree = "<group>"; };
 		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DAA61791836BA45001AFBDF /* GPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMainViewController.h; sourceTree = "<group>"; };
+		7DAA617A1836BA45001AFBDF /* GPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			children = (
 				7DAA616D1836B767001AFBDF /* GPAppDelegate.h */,
 				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
+				7DAA61791836BA45001AFBDF /* GPMainViewController.h */,
+				7DAA617A1836BA45001AFBDF /* GPMainViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			files = (
 				7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */,
 				7DAA61781836B78A001AFBDF /* main.m in Sources */,
+				7DAA617B1836BA45001AFBDF /* GPMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
