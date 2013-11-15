@@ -10,12 +10,13 @@
 		7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61401836B55A001AFBDF /* UIKit.framework */; };
 		7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61421836B55A001AFBDF /* Foundation.framework */; };
 		7DAA61451836B55A001AFBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61441836B55A001AFBDF /* CoreGraphics.framework */; };
-		7DAA614B1836B55A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61491836B55A001AFBDF /* InfoPlist.strings */; };
-		7DAA614D1836B55A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA614C1836B55A001AFBDF /* main.m */; };
-		7DAA61511836B55A001AFBDF /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61501836B55A001AFBDF /* GPAppDelegate.m */; };
-		7DAA61531836B55A001AFBDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61521836B55A001AFBDF /* Default.png */; };
-		7DAA61551836B55A001AFBDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61541836B55A001AFBDF /* Default@2x.png */; };
-		7DAA61571836B55A001AFBDF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61561836B55A001AFBDF /* Default-568h@2x.png */; };
+		7DAA616A1836B74E001AFBDF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61671836B74E001AFBDF /* Default-568h@2x.png */; };
+		7DAA616B1836B74E001AFBDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61681836B74E001AFBDF /* Default.png */; };
+		7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61691836B74E001AFBDF /* Default@2x.png */; };
+		7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA616E1836B767001AFBDF /* GPAppDelegate.m */; };
+		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
+		7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */; };
+		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,15 +24,15 @@
 		7DAA61401836B55A001AFBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DAA61421836B55A001AFBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DAA61441836B55A001AFBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7DAA61481836B55A001AFBDF /* Gone Phishin'-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gone Phishin'-Info.plist"; sourceTree = "<group>"; };
-		7DAA614A1836B55A001AFBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7DAA614C1836B55A001AFBDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7DAA614E1836B55A001AFBDF /* Gone Phishin'-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gone Phishin'-Prefix.pch"; sourceTree = "<group>"; };
-		7DAA614F1836B55A001AFBDF /* GPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
-		7DAA61501836B55A001AFBDF /* GPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
-		7DAA61521836B55A001AFBDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7DAA61541836B55A001AFBDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7DAA61561836B55A001AFBDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7DAA61671836B74E001AFBDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7DAA61681836B74E001AFBDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		7DAA61691836B74E001AFBDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		7DAA616D1836B767001AFBDF /* GPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
+		7DAA616E1836B767001AFBDF /* GPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
+		7DAA61721836B78A001AFBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gone Phishin'-Info.plist"; sourceTree = "<group>"; };
+		7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gone Phishin'-Prefix.pch"; sourceTree = "<group>"; };
+		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +79,9 @@
 		7DAA61461836B55A001AFBDF /* Gone Phishin' */ = {
 			isa = PBXGroup;
 			children = (
-				7DAA614F1836B55A001AFBDF /* GPAppDelegate.h */,
-				7DAA61501836B55A001AFBDF /* GPAppDelegate.m */,
+				7DAA61651836B74E001AFBDF /* Resources */,
+				7DAA61611836B6FC001AFBDF /* Classes */,
+				7DAA61621836B6FC001AFBDF /* Other */,
 				7DAA61471836B55A001AFBDF /* Supporting Files */,
 			);
 			path = "Gone Phishin'";
@@ -88,15 +90,54 @@
 		7DAA61471836B55A001AFBDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DAA61481836B55A001AFBDF /* Gone Phishin'-Info.plist */,
-				7DAA61491836B55A001AFBDF /* InfoPlist.strings */,
-				7DAA614C1836B55A001AFBDF /* main.m */,
-				7DAA614E1836B55A001AFBDF /* Gone Phishin'-Prefix.pch */,
-				7DAA61521836B55A001AFBDF /* Default.png */,
-				7DAA61541836B55A001AFBDF /* Default@2x.png */,
-				7DAA61561836B55A001AFBDF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DAA61611836B6FC001AFBDF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7DAA616D1836B767001AFBDF /* GPAppDelegate.h */,
+				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DAA61621836B6FC001AFBDF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7DAA61701836B78A001AFBDF /* Other */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7DAA61651836B74E001AFBDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7DAA61661836B74E001AFBDF /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7DAA61661836B74E001AFBDF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7DAA61671836B74E001AFBDF /* Default-568h@2x.png */,
+				7DAA61681836B74E001AFBDF /* Default.png */,
+				7DAA61691836B74E001AFBDF /* Default@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7DAA61701836B78A001AFBDF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7DAA61711836B78A001AFBDF /* InfoPlist.strings */,
+				7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */,
+				7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */,
+				7DAA61751836B78A001AFBDF /* main.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +192,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DAA614B1836B55A001AFBDF /* InfoPlist.strings in Resources */,
-				7DAA61531836B55A001AFBDF /* Default.png in Resources */,
-				7DAA61551836B55A001AFBDF /* Default@2x.png in Resources */,
-				7DAA61571836B55A001AFBDF /* Default-568h@2x.png in Resources */,
+				7DAA616A1836B74E001AFBDF /* Default-568h@2x.png in Resources */,
+				7DAA616B1836B74E001AFBDF /* Default.png in Resources */,
+				7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */,
+				7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */,
+				7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,18 +207,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DAA614D1836B55A001AFBDF /* main.m in Sources */,
-				7DAA61511836B55A001AFBDF /* GPAppDelegate.m in Sources */,
+				7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */,
+				7DAA61781836B78A001AFBDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7DAA61491836B55A001AFBDF /* InfoPlist.strings */ = {
+		7DAA61711836B78A001AFBDF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7DAA614A1836B55A001AFBDF /* en */,
+				7DAA61721836B78A001AFBDF /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -246,8 +288,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gone Phishin'/Gone Phishin'-Prefix.pch";
-				INFOPLIST_FILE = "Gone Phishin'/Gone Phishin'-Info.plist";
+				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishin'-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishin'-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -257,8 +299,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gone Phishin'/Gone Phishin'-Prefix.pch";
-				INFOPLIST_FILE = "Gone Phishin'/Gone Phishin'-Info.plist";
+				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishin'-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishin'-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
