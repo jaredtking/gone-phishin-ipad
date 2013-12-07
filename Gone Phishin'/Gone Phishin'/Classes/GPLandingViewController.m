@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 wolverine. All rights reserved.
 //
 
-#import "GPMainViewController.h"
+#import "GPLandingViewController.h"
 
-@implementation GPMainViewController
+@implementation GPLandingViewController
 
 @synthesize helloLabel;
 

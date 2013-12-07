@@ -17,7 +17,9 @@
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
 		7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
-		7DAA617B1836BA45001AFBDF /* GPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPMainViewController.m */; };
+		7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */; };
+		7FC71D241853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */; };
+		7FC71D251853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +36,10 @@
 		7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gone Phishin'-Info.plist"; sourceTree = "<group>"; };
 		7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gone Phishin'-Prefix.pch"; sourceTree = "<group>"; };
 		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7DAA61791836BA45001AFBDF /* GPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMainViewController.h; sourceTree = "<group>"; };
-		7DAA617A1836BA45001AFBDF /* GPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMainViewController.m; sourceTree = "<group>"; };
+		7DAA61791836BA45001AFBDF /* GPLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLandingViewController.h; sourceTree = "<group>"; };
+		7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLandingViewController.m; sourceTree = "<group>"; };
+		7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wolverine-icon-ios-6-non-retina.jpg"; sourceTree = "<group>"; };
+		7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wolverine-icon-ios-6-retina.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,8 @@
 			children = (
 				7DAA616D1836B767001AFBDF /* GPAppDelegate.h */,
 				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
-				7DAA61791836BA45001AFBDF /* GPMainViewController.h */,
-				7DAA617A1836BA45001AFBDF /* GPMainViewController.m */,
+				7DAA61791836BA45001AFBDF /* GPLandingViewController.h */,
+				7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -130,11 +134,21 @@
 		7DAA61661836B74E001AFBDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7FC71D211853C3E2007377EF /* Icons */,
 				7DAA61671836B74E001AFBDF /* Default-568h@2x.png */,
 				7DAA61681836B74E001AFBDF /* Default.png */,
 				7DAA61691836B74E001AFBDF /* Default@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		7FC71D211853C3E2007377EF /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */,
+				7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,8 +205,10 @@
 			files = (
 				7DAA616A1836B74E001AFBDF /* Default-568h@2x.png in Resources */,
 				7DAA616B1836B74E001AFBDF /* Default.png in Resources */,
+				7FC71D241853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg in Resources */,
 				7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */,
 				7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */,
+				7FC71D251853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg in Resources */,
 				7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +222,7 @@
 			files = (
 				7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */,
 				7DAA61781836B78A001AFBDF /* main.m in Sources */,
-				7DAA617B1836BA45001AFBDF /* GPMainViewController.m in Sources */,
+				7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +339,7 @@
 				7DAA615C1836B55A001AFBDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

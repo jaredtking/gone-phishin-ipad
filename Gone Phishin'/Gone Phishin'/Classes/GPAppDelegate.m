@@ -16,7 +16,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[GPMainViewController alloc] init];
+    self.window.rootViewController = [[GPLandingViewController alloc] init];
     return YES;
 }
 

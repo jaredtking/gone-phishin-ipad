@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GPMainViewController.h"
+#import "GPLandingViewController.h"
 
 @interface GPAppDelegate : UIResponder <UIApplicationDelegate>
 
