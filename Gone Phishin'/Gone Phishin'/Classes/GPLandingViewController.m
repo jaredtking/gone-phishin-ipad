@@ -17,9 +17,11 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
-
-    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
-        [self setNeedsStatusBarAppearanceUpdate];
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
+    [self setNeedsStatusBarAppearanceUpdate];
+#else
+#endif
     
     // logo
     UIImage *image = [UIImage imageNamed:@"landing-logo.png"];
@@ -41,7 +43,12 @@
 
 - (UIStatusBarStyle) preferredStatusBarStyle
 {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
     return UIStatusBarStyleLightContent;
+#else
+    return UIStatusBarStyleDefault;
+#endif
+
 }
 
 - (void)viewWillLayoutSubviews
