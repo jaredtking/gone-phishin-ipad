@@ -24,6 +24,8 @@
 		7FC71D301853C6D3007377EF /* icon-ios7-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2D1853C6D3007377EF /* icon-ios7-retina.png */; };
 		7FC71D3D1853C8EA007377EF /* splash-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D3B1853C8EA007377EF /* splash-non-retina.png */; };
 		7FC71D3E1853C8EA007377EF /* splash-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D3C1853C8EA007377EF /* splash-retina.png */; };
+		7FC71D401853CEDF007377EF /* wolverine_logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D3F1853CEDF007377EF /* wolverine_logo_transparent.png */; };
+		7FC71D421853D1ED007377EF /* landing-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D411853D1ED007377EF /* landing-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		7FC71D2D1853C6D3007377EF /* icon-ios7-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios7-retina.png"; sourceTree = "<group>"; };
 		7FC71D3B1853C8EA007377EF /* splash-non-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-non-retina.png"; sourceTree = "<group>"; };
 		7FC71D3C1853C8EA007377EF /* splash-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-retina.png"; sourceTree = "<group>"; };
+		7FC71D3F1853CEDF007377EF /* wolverine_logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wolverine_logo_transparent.png; sourceTree = "<group>"; };
+		7FC71D411853D1ED007377EF /* landing-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landing-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		7DAA61661836B74E001AFBDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7FC71D411853D1ED007377EF /* landing-logo.png */,
+				7FC71D3F1853CEDF007377EF /* wolverine_logo_transparent.png */,
 				7FC71D3A1853C8EA007377EF /* Splash */,
 				7FC71D211853C3E2007377EF /* Icons */,
 				7DAA61671836B74E001AFBDF /* Default-568h@2x.png */,
@@ -230,10 +236,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC71D2E1853C6D3007377EF /* icon-ios6-retina.png in Resources */,
+				7FC71D401853CEDF007377EF /* wolverine_logo_transparent.png in Resources */,
 				7FC71D3D1853C8EA007377EF /* splash-non-retina.png in Resources */,
 				7DAA616A1836B74E001AFBDF /* Default-568h@2x.png in Resources */,
 				7DAA616B1836B74E001AFBDF /* Default.png in Resources */,
 				7FC71D2F1853C6D3007377EF /* icon-ios7-non-retina.png in Resources */,
+				7FC71D421853D1ED007377EF /* landing-logo.png in Resources */,
 				7FC71D2A1853C61F007377EF /* icon-ios6-non-retina.png in Resources */,
 				7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */,
 				7FC71D301853C6D3007377EF /* icon-ios7-retina.png in Resources */,

@@ -17,12 +17,25 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
+
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+        [self setNeedsStatusBarAppearanceUpdate];
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    // logo
+    UIImage *image = [UIImage imageNamed:@"landing-logo.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.contentMode = UIViewContentModeCenter;
+    CGRect frame = imageView.frame;
+    frame.size.width = (1024 / 2) - (30 * 2);
+    frame.size.height = 768;
+    imageView.frame = frame;
+    [self.view addSubview:imageView];
     
     helloLabel = [[UILabel alloc] init];
-    helloLabel.text = @"Hello world!";
-    helloLabel.font = [UIFont systemFontOfSize:36.0];
+    helloLabel.text = @"Gone Phishing";
+    helloLabel.frame = CGRectMake(764, 519, 300, 36);
+    helloLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:29.0];
+    helloLabel.textColor = [UIColor whiteColor];
     [self.view addSubview:helloLabel];
 }
 
