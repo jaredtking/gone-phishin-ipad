@@ -1,4 +1,4 @@
 gone-phishin-ipad
 =================
 
-Gone Phishin' iPad App for Senior Software class
+Gone Phishing iPad App for Senior Software class
