@@ -15,15 +15,17 @@
 		7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61691836B74E001AFBDF /* Default@2x.png */; };
 		7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA616E1836B767001AFBDF /* GPAppDelegate.m */; };
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
-		7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */; };
+		7DAA61771836B78A001AFBDF /* Gone Phishing-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishing-Info.plist */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
 		7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */; };
-		7FC71D241853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */; };
-		7FC71D251853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */; };
+		7FC71D2A1853C61F007377EF /* icon-ios6-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */; };
+		7FC71D2E1853C6D3007377EF /* icon-ios6-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2B1853C6D3007377EF /* icon-ios6-retina.png */; };
+		7FC71D2F1853C6D3007377EF /* icon-ios7-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2C1853C6D3007377EF /* icon-ios7-non-retina.png */; };
+		7FC71D301853C6D3007377EF /* icon-ios7-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2D1853C6D3007377EF /* icon-ios7-retina.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7DAA613D1836B55A001AFBDF /* Gone Phishin'.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gone Phishin'.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAA613D1836B55A001AFBDF /* Gone Phishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gone Phishing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAA61401836B55A001AFBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DAA61421836B55A001AFBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7DAA61441836B55A001AFBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -33,13 +35,15 @@
 		7DAA616D1836B767001AFBDF /* GPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAppDelegate.h; sourceTree = "<group>"; };
 		7DAA616E1836B767001AFBDF /* GPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
 		7DAA61721836B78A001AFBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gone Phishin'-Info.plist"; sourceTree = "<group>"; };
-		7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gone Phishin'-Prefix.pch"; sourceTree = "<group>"; };
+		7DAA61731836B78A001AFBDF /* Gone Phishing-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Gone Phishing-Info.plist"; sourceTree = "<group>"; };
+		7DAA61741836B78A001AFBDF /* Gone Phishing-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gone Phishing-Prefix.pch"; sourceTree = "<group>"; };
 		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DAA61791836BA45001AFBDF /* GPLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLandingViewController.h; sourceTree = "<group>"; };
 		7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLandingViewController.m; sourceTree = "<group>"; };
-		7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wolverine-icon-ios-6-non-retina.jpg"; sourceTree = "<group>"; };
-		7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wolverine-icon-ios-6-retina.jpg"; sourceTree = "<group>"; };
+		7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios6-non-retina.png"; sourceTree = "<group>"; };
+		7FC71D2B1853C6D3007377EF /* icon-ios6-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios6-retina.png"; sourceTree = "<group>"; };
+		7FC71D2C1853C6D3007377EF /* icon-ios7-non-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios7-non-retina.png"; sourceTree = "<group>"; };
+		7FC71D2D1853C6D3007377EF /* icon-ios7-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios7-retina.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,7 @@
 		7DAA61341836B559001AFBDF = {
 			isa = PBXGroup;
 			children = (
-				7DAA61461836B55A001AFBDF /* Gone Phishin' */,
+				7DAA61461836B55A001AFBDF /* Gone Phishing */,
 				7DAA613F1836B55A001AFBDF /* Frameworks */,
 				7DAA613E1836B55A001AFBDF /* Products */,
 			);
@@ -68,7 +72,7 @@
 		7DAA613E1836B55A001AFBDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7DAA613D1836B55A001AFBDF /* Gone Phishin'.app */,
+				7DAA613D1836B55A001AFBDF /* Gone Phishing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +87,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7DAA61461836B55A001AFBDF /* Gone Phishin' */ = {
+		7DAA61461836B55A001AFBDF /* Gone Phishing */ = {
 			isa = PBXGroup;
 			children = (
 				7DAA61651836B74E001AFBDF /* Resources */,
@@ -91,6 +95,7 @@
 				7DAA61621836B6FC001AFBDF /* Other */,
 				7DAA61471836B55A001AFBDF /* Supporting Files */,
 			);
+			name = "Gone Phishing";
 			path = "Gone Phishin'";
 			sourceTree = "<group>";
 		};
@@ -116,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				7DAA61711836B78A001AFBDF /* InfoPlist.strings */,
-				7DAA61731836B78A001AFBDF /* Gone Phishin'-Info.plist */,
-				7DAA61741836B78A001AFBDF /* Gone Phishin'-Prefix.pch */,
+				7DAA61731836B78A001AFBDF /* Gone Phishing-Info.plist */,
+				7DAA61741836B78A001AFBDF /* Gone Phishing-Prefix.pch */,
 				7DAA61751836B78A001AFBDF /* main.m */,
 			);
 			path = Other;
@@ -145,8 +150,10 @@
 		7FC71D211853C3E2007377EF /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				7FC71D221853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg */,
-				7FC71D231853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg */,
+				7FC71D2B1853C6D3007377EF /* icon-ios6-retina.png */,
+				7FC71D2C1853C6D3007377EF /* icon-ios7-non-retina.png */,
+				7FC71D2D1853C6D3007377EF /* icon-ios7-retina.png */,
+				7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -154,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7DAA613C1836B55A001AFBDF /* Gone Phishin' */ = {
+		7DAA613C1836B55A001AFBDF /* Gone Phishing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7DAA615A1836B55A001AFBDF /* Build configuration list for PBXNativeTarget "Gone Phishin'" */;
+			buildConfigurationList = 7DAA615A1836B55A001AFBDF /* Build configuration list for PBXNativeTarget "Gone Phishing" */;
 			buildPhases = (
 				7DAA61391836B55A001AFBDF /* Sources */,
 				7DAA613A1836B55A001AFBDF /* Frameworks */,
@@ -166,9 +173,9 @@
 			);
 			dependencies = (
 			);
-			name = "Gone Phishin'";
+			name = "Gone Phishing";
 			productName = "Gone Phishin'";
-			productReference = 7DAA613D1836B55A001AFBDF /* Gone Phishin'.app */;
+			productReference = 7DAA613D1836B55A001AFBDF /* Gone Phishing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -180,8 +187,13 @@
 				CLASSPREFIX = GP;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = wolverine;
+				TargetAttributes = {
+					7DAA613C1836B55A001AFBDF = {
+						DevelopmentTeam = SJAFQ9MR2A;
+					};
+				};
 			};
-			buildConfigurationList = 7DAA61381836B559001AFBDF /* Build configuration list for PBXProject "Gone Phishin'" */;
+			buildConfigurationList = 7DAA61381836B559001AFBDF /* Build configuration list for PBXProject "Gone Phishing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,7 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7DAA613C1836B55A001AFBDF /* Gone Phishin' */,
+				7DAA613C1836B55A001AFBDF /* Gone Phishing */,
 			);
 		};
 /* End PBXProject section */
@@ -203,13 +215,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC71D2E1853C6D3007377EF /* icon-ios6-retina.png in Resources */,
 				7DAA616A1836B74E001AFBDF /* Default-568h@2x.png in Resources */,
 				7DAA616B1836B74E001AFBDF /* Default.png in Resources */,
-				7FC71D241853C3E2007377EF /* wolverine-icon-ios-6-non-retina.jpg in Resources */,
+				7FC71D2F1853C6D3007377EF /* icon-ios7-non-retina.png in Resources */,
+				7FC71D2A1853C61F007377EF /* icon-ios6-non-retina.png in Resources */,
 				7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */,
+				7FC71D301853C6D3007377EF /* icon-ios7-retina.png in Resources */,
 				7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */,
-				7FC71D251853C3E2007377EF /* wolverine-icon-ios-6-retina.jpg in Resources */,
-				7DAA61771836B78A001AFBDF /* Gone Phishin'-Info.plist in Resources */,
+				7DAA61771836B78A001AFBDF /* Gone Phishing-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,10 +315,12 @@
 		7DAA615B1836B55A001AFBDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishin'-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishin'-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishing-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Gone Phishing";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -312,10 +328,12 @@
 		7DAA615C1836B55A001AFBDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishin'-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishin'-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Gone Phishin'/Other/Gone Phishing-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Gone Phishin'/Other/Gone Phishing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "Gone Phishing";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -323,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7DAA61381836B559001AFBDF /* Build configuration list for PBXProject "Gone Phishin'" */ = {
+		7DAA61381836B559001AFBDF /* Build configuration list for PBXProject "Gone Phishing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DAA61581836B55A001AFBDF /* Debug */,
@@ -332,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7DAA615A1836B55A001AFBDF /* Build configuration list for PBXNativeTarget "Gone Phishin'" */ = {
+		7DAA615A1836B55A001AFBDF /* Build configuration list for PBXNativeTarget "Gone Phishing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7DAA615B1836B55A001AFBDF /* Debug */,
