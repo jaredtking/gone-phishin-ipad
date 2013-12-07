@@ -16,10 +16,19 @@
 {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:BACKGROUND_COLOR];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     helloLabel = [[UILabel alloc] init];
     helloLabel.text = @"Hello world!";
     helloLabel.font = [UIFont systemFontOfSize:36.0];
     [self.view addSubview:helloLabel];
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillLayoutSubviews

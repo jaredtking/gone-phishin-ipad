@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GPAppDelegate.h"
 
 @interface GPLandingViewController : UIViewController
 {
