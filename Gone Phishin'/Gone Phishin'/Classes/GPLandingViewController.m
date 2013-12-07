@@ -10,7 +10,8 @@
 
 @implementation GPLandingViewController
 
-@synthesize helloLabel;
+@synthesize titleLabel;
+@synthesize imageView;
 
 - (void)viewDidLoad
 {
@@ -25,20 +26,17 @@
     
     // logo
     UIImage *image = [UIImage imageNamed:@"landing-logo.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView = [[UIImageView alloc] initWithImage:image];
     imageView.contentMode = UIViewContentModeCenter;
-    CGRect frame = imageView.frame;
-    frame.size.width = (1024 / 2) - (30 * 2);
-    frame.size.height = 768;
-    imageView.frame = frame;
     [self.view addSubview:imageView];
     
-    helloLabel = [[UILabel alloc] init];
-    helloLabel.text = @"Gone Phishing";
-    helloLabel.frame = CGRectMake(764, 519, 300, 36);
-    helloLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:29.0];
-    helloLabel.textColor = [UIColor whiteColor];
-    [self.view addSubview:helloLabel];
+    // title label
+    titleLabel = [[UILabel alloc] init];
+    titleLabel.text = @"Gone Phishing";
+    titleLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:50.0];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:titleLabel];
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle
@@ -53,7 +51,12 @@
 
 - (void)viewWillLayoutSubviews
 {
-    helloLabel.frame = CGRectMake(100, 10, 320, 26);
+    titleLabel.frame = CGRectMake(500, 200, 320, 36);
+    
+    CGRect frame = imageView.frame;
+    frame.size.width = (1024 / 2) - (30 * 2);
+    frame.size.height = 768;
+    imageView.frame = frame;
 }
 
 - (void)didReceiveMemoryWarning

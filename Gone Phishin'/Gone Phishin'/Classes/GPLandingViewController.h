@@ -15,6 +15,7 @@
     
 }
 
-@property (strong, nonatomic) UILabel *helloLabel;
+@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIImageView *imageView;
 
 @end
