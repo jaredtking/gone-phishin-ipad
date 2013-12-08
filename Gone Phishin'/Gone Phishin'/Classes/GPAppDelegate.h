@@ -11,6 +11,8 @@
 
 #define BACKGROUND_COLOR [UIColor colorWithRed:0/255.0 green:76/255.0 blue:153/255.0 alpha:1.0]
 
+#define DEFAULT_FONT @"MarkerFelt-Thin"
+
 
 @interface GPAppDelegate : UIResponder <UIApplicationDelegate>
 
