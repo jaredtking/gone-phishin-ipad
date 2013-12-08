@@ -92,7 +92,11 @@
     [quizButton setTitle:@"Take the quiz!" forState:UIControlStateNormal];
     [quizButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [quizButton setTintColor:[UIColor colorWithRed:0/255.0 green:127/255.0 blue:255/255.0 alpha:1.0]];
+    //[quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
+    [quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [quizButton.layer setBackgroundColor:[[UIColor brownColor] CGColor]];
+    [quizButton.layer setBorderWidth:1.0];
+    [quizButton.layer setCornerRadius:10];
     [self.view addSubview:quizButton];
     
     

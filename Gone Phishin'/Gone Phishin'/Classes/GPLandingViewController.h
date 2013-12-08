@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Availability.h>
 #import "GPAppDelegate.h"
+#import "UIImage+JTKGradient.h"
+
 
 @interface GPLandingViewController : UIViewController
 {

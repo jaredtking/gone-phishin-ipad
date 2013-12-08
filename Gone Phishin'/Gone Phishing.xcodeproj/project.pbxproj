@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7D68C0B11853E67000425692 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */; };
 		7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */; };
+		7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */; };
 		7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61401836B55A001AFBDF /* UIKit.framework */; };
 		7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61421836B55A001AFBDF /* Foundation.framework */; };
 		7DAA61451836B55A001AFBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61441836B55A001AFBDF /* CoreGraphics.framework */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTKGradient.h"; sourceTree = "<group>"; };
+		7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTKGradient.m"; sourceTree = "<group>"; };
 		7DAA613D1836B55A001AFBDF /* Gone Phishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gone Phishing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAA61401836B55A001AFBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DAA61421836B55A001AFBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 		7DAA61611836B6FC001AFBDF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */,
+				7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */,
 				7DAA616D1836B767001AFBDF /* GPAppDelegate.h */,
 				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
 				7DAA61791836BA45001AFBDF /* GPLandingViewController.h */,
@@ -269,6 +274,7 @@
 				7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */,
 				7DAA61781836B78A001AFBDF /* main.m in Sources */,
 				7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */,
+				7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
