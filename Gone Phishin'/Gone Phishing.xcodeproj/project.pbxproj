@@ -10,6 +10,11 @@
 		7D68C0B11853E67000425692 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */; };
 		7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */; };
 		7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */; };
+		7D68C0B91853F43000425692 /* GPContentItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B81853F43000425692 /* GPContentItemViewController.m */; };
+		7D68C0BC1853F4A400425692 /* GPScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0BB1853F4A400425692 /* GPScore.m */; };
+		7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0BE1853F7C600425692 /* GPQuiz.m */; };
+		7D68C0C21853F84300425692 /* GPQuizResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */; };
+		7D68C0C51853F85100425692 /* GPHighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C41853F85100425692 /* GPHighScoresViewController.m */; };
 		7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61401836B55A001AFBDF /* UIKit.framework */; };
 		7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61421836B55A001AFBDF /* Foundation.framework */; };
 		7DAA61451836B55A001AFBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61441836B55A001AFBDF /* CoreGraphics.framework */; };
@@ -36,6 +41,16 @@
 		7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTKGradient.h"; sourceTree = "<group>"; };
 		7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTKGradient.m"; sourceTree = "<group>"; };
+		7D68C0B71853F43000425692 /* GPContentItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPContentItemViewController.h; sourceTree = "<group>"; };
+		7D68C0B81853F43000425692 /* GPContentItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPContentItemViewController.m; sourceTree = "<group>"; };
+		7D68C0BA1853F4A400425692 /* GPScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPScore.h; sourceTree = "<group>"; };
+		7D68C0BB1853F4A400425692 /* GPScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPScore.m; sourceTree = "<group>"; };
+		7D68C0BD1853F7C600425692 /* GPQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPQuiz.h; sourceTree = "<group>"; };
+		7D68C0BE1853F7C600425692 /* GPQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPQuiz.m; sourceTree = "<group>"; };
+		7D68C0C01853F84300425692 /* GPQuizResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPQuizResultsViewController.h; sourceTree = "<group>"; };
+		7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPQuizResultsViewController.m; sourceTree = "<group>"; };
+		7D68C0C31853F85100425692 /* GPHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHighScoresViewController.h; sourceTree = "<group>"; };
+		7D68C0C41853F85100425692 /* GPHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHighScoresViewController.m; sourceTree = "<group>"; };
 		7DAA613D1836B55A001AFBDF /* Gone Phishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gone Phishing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAA61401836B55A001AFBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DAA61421836B55A001AFBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +147,16 @@
 				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
 				7DAA61791836BA45001AFBDF /* GPLandingViewController.h */,
 				7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */,
+				7D68C0B71853F43000425692 /* GPContentItemViewController.h */,
+				7D68C0B81853F43000425692 /* GPContentItemViewController.m */,
+				7D68C0BA1853F4A400425692 /* GPScore.h */,
+				7D68C0BB1853F4A400425692 /* GPScore.m */,
+				7D68C0BD1853F7C600425692 /* GPQuiz.h */,
+				7D68C0BE1853F7C600425692 /* GPQuiz.m */,
+				7D68C0C01853F84300425692 /* GPQuizResultsViewController.h */,
+				7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */,
+				7D68C0C31853F85100425692 /* GPHighScoresViewController.h */,
+				7D68C0C41853F85100425692 /* GPHighScoresViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -275,6 +300,11 @@
 				7DAA61781836B78A001AFBDF /* main.m in Sources */,
 				7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */,
 				7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */,
+				7D68C0B91853F43000425692 /* GPContentItemViewController.m in Sources */,
+				7D68C0BC1853F4A400425692 /* GPScore.m in Sources */,
+				7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */,
+				7D68C0C21853F84300425692 /* GPQuizResultsViewController.m in Sources */,
+				7D68C0C51853F85100425692 /* GPHighScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

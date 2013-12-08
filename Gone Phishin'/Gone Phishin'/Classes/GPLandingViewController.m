@@ -90,15 +90,15 @@
     // take quiz button
     quizButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [quizButton setTitle:@"Take the quiz!" forState:UIControlStateNormal];
-    [quizButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
+    quizButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
+    //    [quizButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //[quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
-    [quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    [quizButton.layer setBackgroundColor:[[UIColor brownColor] CGColor]];
-    [quizButton.layer setBorderWidth:1.0];
-    [quizButton.layer setCornerRadius:10];
+    [quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
+    //[quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    //[quizButton.layer setBorderWidth:1.0];
+    //[quizButton.layer setCornerRadius:10];
+    [quizButton addTarget:self action:@selector(takeQuizButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:quizButton];
-    
     
     // 
 }
@@ -131,15 +131,21 @@
     imageView.frame = frame;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)resignKeyboard:(id)sender
 {
     [nameField resignFirstResponder];
+}
+
+- (void)takeQuizButtonPressed:(id)sender
+{
+    // switch view to content item
+    GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
+    
+    // seed quiz
+    // TODO pass information to view controller
+    //contentItemVC.quizTakersName = [nameField text];
+    
+    [self presentViewController:contentItemVC animated:YES completion:nil];
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification
@@ -149,6 +155,12 @@
     
     // adjust the bottom content inset of scroll view by the keyboard height.
     //UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

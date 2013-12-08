@@ -10,7 +10,7 @@
 #import <Availability.h>
 #import "GPAppDelegate.h"
 #import "UIImage+JTKGradient.h"
-
+#import "GPContentItemViewController.h"
 
 @interface GPLandingViewController : UIViewController
 {
@@ -19,6 +19,7 @@
 }
 
 - (void)resignKeyboard:(id)sender;
+- (void)takeQuizButtonPressed:(id)sender;
 
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *bylineLabel;
