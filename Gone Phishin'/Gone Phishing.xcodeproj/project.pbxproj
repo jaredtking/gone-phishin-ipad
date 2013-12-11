@@ -15,7 +15,9 @@
 		7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0BE1853F7C600425692 /* GPQuiz.m */; };
 		7D68C0C21853F84300425692 /* GPQuizResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */; };
 		7D68C0C51853F85100425692 /* GPHighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C41853F85100425692 /* GPHighScoresViewController.m */; };
-		7D7797E61857EFBE002241FD /* Komika_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D7797E51857EFBE002241FD /* Komika_Hand.ttf */; };
+		7D7797EA1857F91C002241FD /* instructions.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7D7797E91857F91C002241FD /* instructions.wav */; };
+		7D7797EC1857F934002241FD /* Komika_Hand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D7797EB1857F934002241FD /* Komika_Hand.ttf */; };
+		7D7797F118580338002241FD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7797F018580338002241FD /* AVFoundation.framework */; };
 		7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61401836B55A001AFBDF /* UIKit.framework */; };
 		7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61421836B55A001AFBDF /* Foundation.framework */; };
 		7DAA61451836B55A001AFBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAA61441836B55A001AFBDF /* CoreGraphics.framework */; };
@@ -24,7 +26,6 @@
 		7DAA616C1836B74E001AFBDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61691836B74E001AFBDF /* Default@2x.png */; };
 		7DAA616F1836B767001AFBDF /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA616E1836B767001AFBDF /* GPAppDelegate.m */; };
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
-		7DAA61771836B78A001AFBDF /* Gone Phishing-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61731836B78A001AFBDF /* Gone Phishing-Info.plist */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
 		7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */; };
 		7FC71D2A1853C61F007377EF /* icon-ios6-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */; };
@@ -52,7 +53,9 @@
 		7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPQuizResultsViewController.m; sourceTree = "<group>"; };
 		7D68C0C31853F85100425692 /* GPHighScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHighScoresViewController.h; sourceTree = "<group>"; };
 		7D68C0C41853F85100425692 /* GPHighScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHighScoresViewController.m; sourceTree = "<group>"; };
-		7D7797E51857EFBE002241FD /* Komika_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Komika_Hand.ttf; path = "../../../../../Desktop/Komika-Hand/Komika_Hand.ttf"; sourceTree = "<group>"; };
+		7D7797E91857F91C002241FD /* instructions.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = instructions.wav; sourceTree = "<group>"; };
+		7D7797EB1857F934002241FD /* Komika_Hand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Komika_Hand.ttf; sourceTree = "<group>"; };
+		7D7797F018580338002241FD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7DAA613D1836B55A001AFBDF /* Gone Phishing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gone Phishing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAA61401836B55A001AFBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7DAA61421836B55A001AFBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D7797F118580338002241FD /* AVFoundation.framework in Frameworks */,
 				7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */,
 				7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */,
 				7DAA61451836B55A001AFBDF /* CoreGraphics.framework in Frameworks */,
@@ -95,6 +99,7 @@
 		7DAA61341836B559001AFBDF = {
 			isa = PBXGroup;
 			children = (
+				7D7797F018580338002241FD /* AVFoundation.framework */,
 				7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */,
 				7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */,
 				7DAA61461836B55A001AFBDF /* Gone Phishing */,
@@ -177,7 +182,8 @@
 		7DAA61651836B74E001AFBDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D7797E51857EFBE002241FD /* Komika_Hand.ttf */,
+				7D7797EB1857F934002241FD /* Komika_Hand.ttf */,
+				7D7797E91857F91C002241FD /* instructions.wav */,
 				7DAA61661836B74E001AFBDF /* Images */,
 			);
 			path = Resources;
@@ -286,10 +292,10 @@
 				7FC71D301853C6D3007377EF /* icon-ios7-retina.png in Resources */,
 				7FC71D3E1853C8EA007377EF /* splash-retina.png in Resources */,
 				7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */,
-				7DAA61771836B78A001AFBDF /* Gone Phishing-Info.plist in Resources */,
 				7D68C0B11853E67000425692 /* Default-Landscape~ipad.png in Resources */,
 				7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */,
-				7D7797E61857EFBE002241FD /* Komika_Hand.ttf in Resources */,
+				7D7797EA1857F91C002241FD /* instructions.wav in Resources */,
+				7D7797EC1857F934002241FD /* Komika_Hand.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

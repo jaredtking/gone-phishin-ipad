@@ -19,10 +19,21 @@
 @synthesize nameField;
 @synthesize scoreButton;
 @synthesize audioButton;
+@synthesize instructAudio;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //load instructions audio
+    NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
+    NSAssert(audioUrl,@"URL is valid.");
+    NSError* error = nil;
+    self.instructAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:audioUrl error:&error];
+    if(!(self.instructAudio))
+    {
+        NSLog(@"Error creating player: %@",error);
+    }
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
     
@@ -121,6 +132,12 @@
     [self.view addSubview:audioButton];
 }
 
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    self.instructAudio = nil;
+}
+
 - (UIStatusBarStyle) preferredStatusBarStyle
 {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
@@ -166,6 +183,26 @@
     //contentItemVC.quizTakersName = [nameField text];
     
     [self presentViewController:contentItemVC animated:YES completion:nil];
+}
+
+- (void)showScoresButtonPressed:(id)sender
+{
+    // switch view to high score table
+    GPHighScoresViewController *highScoresVC = [[GPHighScoresViewController alloc] init];
+    [self presentViewController:highScoresVC animated:YES completion:nil];
+}
+
+- (void)playAudioButtonPressed:(id)sender
+{
+    if(self.instructAudio.playing == YES)
+    {
+        [self.instructAudio stop];
+        self.instructAudio.currentTime = 0;
+    }
+    else
+    {
+        [self.instructAudio play];
+    }
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification
