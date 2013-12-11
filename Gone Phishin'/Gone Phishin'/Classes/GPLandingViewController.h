@@ -27,6 +27,8 @@
 @property (strong, nonatomic) UILabel *nameFieldLabel;
 @property (strong, nonatomic) UIButton *quizButton;
 @property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) UIButton *scoreButton;
+@property (strong, nonatomic) UIButton *audioButton;
 
 @property (strong, nonatomic) UITextField *nameField;
 
