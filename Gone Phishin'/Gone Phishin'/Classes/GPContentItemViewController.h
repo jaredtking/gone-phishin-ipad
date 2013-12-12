@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GPAppDelegate.h"
 #import "GPQuizResultsViewController.h"
+#import "GPLandingViewController.h"
 
-@interface GPContentItemViewController : UIViewController
+@interface GPContentItemViewController : UIViewController<UIAlertViewDelegate>
 
 @property (strong, nonatomic) GPQuiz *quiz;
 
@@ -20,8 +21,11 @@
 @property (strong, nonatomic) UIButton *dontTrustButton;
 @property (strong, nonatomic) UIImageView *cItemView;
 
+- (void)cancelButtonPressed:(id)sender;
 - (void)trustButtonPressed:(id)sender;
 - (void)dontTrustButtonPressed:(id)sender;
+- (void)nextQuestion;
 - (void)exitQuiz;
+- (void)finishQuiz;
 
 @end

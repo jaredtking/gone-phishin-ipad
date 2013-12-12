@@ -19,8 +19,26 @@
     // seed quiz
     [self seed];
     
+    questionNo = 1;
+    
     return self;
 }
+
+#pragma mark -
+#pragma mark Getters
+
+- (NSString *)getName
+{
+    return name;
+}
+
+- (int)getQuestionNo
+{
+    return questionNo;
+}
+
+#pragma mark -
+#pragma mark Setters
 
 - (void)seed
 {
@@ -28,9 +46,9 @@
     // TODO
 }
 
-- (NSString *)getName
+- (void)setQuestionNo:(int)n
 {
-    return name;
+    questionNo = n;
 }
 
 @end

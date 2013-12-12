@@ -12,10 +12,13 @@
 {
 @private
     NSString *name;
+    int questionNo;
 }
 
 - (id)initWithName:(NSString *)quizTakersName;
 - (void)seed;
 - (NSString *)getName;
+- (int)getQuestionNo;
+- (void)setQuestionNo:(int)n;
 
 @end

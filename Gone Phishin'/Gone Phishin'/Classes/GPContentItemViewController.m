@@ -34,7 +34,6 @@
     trustButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [trustButton setTitle:@"Trust" forState:UIControlStateNormal];
     trustButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
-//    [trustButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [trustButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [trustButton setBackgroundImage:GREEN_BUTTON_IMAGE forState:UIControlStateNormal];
     [trustButton addTarget:self action:@selector(trustButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,7 +42,6 @@
     dontTrustButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [dontTrustButton setTitle:@"Don't trust" forState:UIControlStateNormal];
     dontTrustButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
-    //    [trustButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [dontTrustButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [dontTrustButton setBackgroundImage:RED_BUTTON_IMAGE forState:UIControlStateNormal];
     [dontTrustButton addTarget:self action:@selector(dontTrustButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -54,6 +52,15 @@
     cItemView = [[UIImageView alloc] initWithImage:content];
     cItemView.contentMode = UIViewContentModeCenter;
     [self.view addSubview:cItemView];
+    
+    // remove back button for first question
+    [self.navigationItem setHidesBackButton:[quiz getQuestionNo] == 1];
+
+    // end quiz button
+    UIBarButtonItem *endQuizItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)];
+    
+    NSArray *actionButtonItems = @[endQuizItem];
+    self.navigationItem.rightBarButtonItems = actionButtonItems;
 }
 
 - (void)viewDidUnload
@@ -91,32 +98,70 @@
     cItemView.frame = frame;
 }
 
+#pragma mark -
+#pragma mark Button Presses
+
+- (void)cancelButtonPressed:(id)sender
+{
+    // ask user if they really want to quit
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cancel quiz" message:@"Are you sure you want to quit?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    
+    [alert show];
+}
+
 - (void)trustButtonPressed:(id)sender
 {
-    [self exitQuiz];
+    [self finishQuiz];
 }
 
 - (void)dontTrustButtonPressed:(id)sender
 {
-    [self exitQuiz];
+    [self finishQuiz];
 }
 
-- (void)exitQuiz
+#pragma mark -
+#pragma mark Quiz Transitions
+
+- (void)nextQuestion
 {
-    // exit quiz and move to quiz results
+    
+}
+
+- (void)finishQuiz
+{
+    // move to quiz results
     GPQuizResultsViewController *quizResultsVC = [[GPQuizResultsViewController alloc] init];
     
     // pass quiz to quiz results
     quizResultsVC.quiz = quiz;
-        
+    
     // push new view onto navigation stack
     [self.navigationController pushViewController:quizResultsVC animated:YES];
+}
+
+
+- (void)exitQuiz
+{
+    // go back to landing
+    GPLandingViewController *landingVC = [[GPLandingViewController alloc] init];
+    
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:landingVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+#pragma mark Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+        [self exitQuiz];
 }
 
 @end
