@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "GPRootViewController.h"
 #import "GPLandingViewController.h"
 
 #define BACKGROUND_COLOR [UIColor colorWithRed:0/255.0 green:76/255.0 blue:153/255.0 alpha:1.0]

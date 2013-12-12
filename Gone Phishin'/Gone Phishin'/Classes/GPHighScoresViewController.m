@@ -20,11 +20,6 @@
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    [self setNeedsStatusBarAppearanceUpdate];
-#else
-#endif
-	
     // instantiate UI elements here
     scoresLabel = [[UILabel alloc] init];
     scoresLabel.text = @"High Scores";
@@ -47,12 +42,19 @@
     [self.view addSubview:goHomeButton];
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle
+- (void)viewDidUnload
 {
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // hide navigation bar
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    return UIStatusBarStyleLightContent;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 #else
-    return UIStatusBarStyleDefault;
 #endif
 }
 
@@ -66,10 +68,10 @@
 
 - (void)goHomeButtonPressed:(id)sender
 {
-    // switch view to high scores
     GPLandingViewController *landingVC = [[GPLandingViewController alloc] init];
-    
-    [self presentViewController:landingVC animated:YES completion:nil];
+
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:landingVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

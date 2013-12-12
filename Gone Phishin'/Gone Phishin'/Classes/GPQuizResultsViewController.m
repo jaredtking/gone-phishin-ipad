@@ -15,17 +15,13 @@
 @synthesize compareLabel;
 @synthesize tryAgainButton;
 @synthesize viewHighScoresButton;
+@synthesize quiz;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
-    
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    [self setNeedsStatusBarAppearanceUpdate];
-#else
-#endif
 	
     //TO-DO: determine user score, and ranking in high score list (-1 if not ranked)
     int numCorrect = 4;
@@ -73,7 +69,6 @@
     tryAgainButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [tryAgainButton setTitle:@"Try again" forState:UIControlStateNormal];
     tryAgainButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
-    //    [tryAgainButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [tryAgainButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [tryAgainButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
     [tryAgainButton addTarget:self action:@selector(tryAgainButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -82,11 +77,26 @@
     viewHighScoresButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [viewHighScoresButton setTitle:@"View High Scores" forState:UIControlStateNormal];
     viewHighScoresButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
-    //    [viewHighScoresButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [viewHighScoresButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [viewHighScoresButton setBackgroundImage:GREEN_BUTTON_IMAGE forState:UIControlStateNormal];
     [viewHighScoresButton addTarget:self action:@selector(viewHighScoresButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:viewHighScoresButton];
+}
+
+- (void)viewDidUnload
+{
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // hide navigation bar
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+#else
+#endif
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle
@@ -110,22 +120,26 @@
 
 - (void)tryAgainButtonPressed:(id)sender
 {
-    // switch view to content item
+    // create a quiz
+    GPQuiz *newQuiz = [[GPQuiz alloc] initWithName:[quiz getName]];
+    
+    // create first content item view
     GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
     
-    // seed quiz
-    // TODO pass information to view controller
-    //contentItemVC.quizTakersName = [nameField text];
+    // pass quiz onto first content item view controller
+    contentItemVC.quiz = newQuiz;
     
-    [self presentViewController:contentItemVC animated:YES completion:nil];
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:contentItemVC animated:YES];
 }
 
 - (void)viewHighScoresButtonPressed:(id)sender
 {
     // switch view to high scores
     GPHighScoresViewController *highScoresVC = [[GPHighScoresViewController alloc] init];
-        
-    [self presentViewController:highScoresVC animated:YES completion:nil];
+
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:highScoresVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

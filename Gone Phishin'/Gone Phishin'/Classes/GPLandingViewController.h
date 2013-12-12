@@ -10,7 +10,9 @@
 #import <Availability.h>
 #import "GPAppDelegate.h"
 #import "UIImage+JTKGradient.h"
+#import "GPQuiz.h"
 #import "GPContentItemViewController.h"
+#import "GPRootViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface GPLandingViewController : UIViewController

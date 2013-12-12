@@ -12,6 +12,8 @@
 
 @interface GPContentItemViewController : UIViewController
 
+@property (strong, nonatomic) GPQuiz *quiz;
+
 // add UI element properties here
 @property (strong, nonatomic) UILabel *trustLabel;
 @property (strong, nonatomic) UIButton *trustButton;
@@ -20,5 +22,6 @@
 
 - (void)trustButtonPressed:(id)sender;
 - (void)dontTrustButtonPressed:(id)sender;
+- (void)exitQuiz;
 
 @end

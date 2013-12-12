@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface GPQuiz : NSObject
+{
+@private
+    NSString *name;
+}
+
+- (id)initWithName:(NSString *)quizTakersName;
+- (void)seed;
+- (NSString *)getName;
 
 @end

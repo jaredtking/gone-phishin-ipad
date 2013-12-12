@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     
-    //load instructions audio
+    // load instructions audio
     NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
     NSAssert(audioUrl,@"URL is valid.");
     NSError* error = nil;
@@ -36,11 +36,6 @@
     }
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
-    
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    [self setNeedsStatusBarAppearanceUpdate];
-#else
-#endif
     
     // hide the keyboard when tapped outside
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -138,12 +133,14 @@
     self.instructAudio = nil;
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle
+- (void)viewWillAppear:(BOOL)animated
 {
+    // hide navigation bar
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    return UIStatusBarStyleLightContent;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 #else
-    return UIStatusBarStyleDefault;
 #endif
 }
 
@@ -174,21 +171,26 @@
 
 - (void)takeQuizButtonPressed:(id)sender
 {
-    // switch view to content item
+    // create a quiz
+    GPQuiz *quiz = [[GPQuiz alloc] initWithName:[nameField text]];
+    
+    // create first content item view
     GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
     
-    // seed quiz
-    // TODO pass information to view controller
-    //contentItemVC.quizTakersName = [nameField text];
+    // pass quiz onto first content item view controller
+    contentItemVC.quiz = quiz;
     
-    [self presentViewController:contentItemVC animated:YES completion:nil];
+    // finally present the navigation controller
+    [self.navigationController pushViewController:contentItemVC animated:YES];
 }
 
 - (void)showScoresButtonPressed:(id)sender
 {
     // switch view to high score table
     GPHighScoresViewController *highScoresVC = [[GPHighScoresViewController alloc] init];
-    [self presentViewController:highScoresVC animated:YES completion:nil];
+    
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:highScoresVC animated:YES];
 }
 
 - (void)playAudioButtonPressed:(id)sender
@@ -205,6 +207,15 @@
 }
 
 - (void)keyboardWasShown:(NSNotification *)notification
+{
+    // get the size of the keyboard
+    keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // adjust the bottom content inset of scroll view by the keyboard height.
+    //UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
 {
     // get the size of the keyboard
     keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;

@@ -32,6 +32,7 @@
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
 		7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */; };
+		7FB6CE03185A4911000B4327 /* GPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6CE02185A4911000B4327 /* GPRootViewController.m */; };
 		7FC71D2A1853C61F007377EF /* icon-ios6-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */; };
 		7FC71D2E1853C6D3007377EF /* icon-ios6-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2B1853C6D3007377EF /* icon-ios6-retina.png */; };
 		7FC71D2F1853C6D3007377EF /* icon-ios7-non-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC71D2C1853C6D3007377EF /* icon-ios7-non-retina.png */; };
@@ -79,6 +80,8 @@
 		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DAA61791836BA45001AFBDF /* GPLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLandingViewController.h; sourceTree = "<group>"; };
 		7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLandingViewController.m; sourceTree = "<group>"; };
+		7FB6CE01185A4911000B4327 /* GPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRootViewController.h; sourceTree = "<group>"; };
+		7FB6CE02185A4911000B4327 /* GPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRootViewController.m; sourceTree = "<group>"; };
 		7FC71D291853C61F007377EF /* icon-ios6-non-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios6-non-retina.png"; sourceTree = "<group>"; };
 		7FC71D2B1853C6D3007377EF /* icon-ios6-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios6-retina.png"; sourceTree = "<group>"; };
 		7FC71D2C1853C6D3007377EF /* icon-ios7-non-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios7-non-retina.png"; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */,
 				7D68C0C31853F85100425692 /* GPHighScoresViewController.h */,
 				7D68C0C41853F85100425692 /* GPHighScoresViewController.m */,
+				7FB6CE01185A4911000B4327 /* GPRootViewController.h */,
+				7FB6CE02185A4911000B4327 /* GPRootViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				7DAA61781836B78A001AFBDF /* main.m in Sources */,
 				7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */,
 				7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */,
+				7FB6CE03185A4911000B4327 /* GPRootViewController.m in Sources */,
 				7D68C0B91853F43000425692 /* GPContentItemViewController.m in Sources */,
 				7D68C0BC1853F4A400425692 /* GPScore.m in Sources */,
 				7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */,

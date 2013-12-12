@@ -12,11 +12,13 @@
 
 @interface GPQuizResultsViewController : UIViewController
 
+@property (strong, nonatomic) GPQuiz *quiz;
+
 @property (strong, nonatomic) UILabel *ratingLabel;
 @property (strong, nonatomic) UILabel *countLabel;
 @property (strong, nonatomic) UILabel *compareLabel;
-@property (nonatomic, strong) UIButton *tryAgainButton;
-@property (nonatomic, strong) UIButton *viewHighScoresButton;
+@property (strong, nonatomic) UIButton *tryAgainButton;
+@property (strong, nonatomic) UIButton *viewHighScoresButton;
 
 - (void)tryAgainButtonPressed:(id)sender;
 - (void)viewHighScoresButtonPressed:(id)sender;

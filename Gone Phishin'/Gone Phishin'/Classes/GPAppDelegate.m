@@ -14,9 +14,18 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = BACKGROUND_COLOR;
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[GPLandingViewController alloc] init];
+
+    [UIApplication sharedApplication].statusBarHidden = NO;
+
+    // create landing view
+    GPLandingViewController *landingVC = [[GPLandingViewController alloc] init];
+    
+    // create the root navigation controller
+    GPRootViewController *rootVC = [[GPRootViewController alloc] initWithViewController:landingVC];
+    
+    self.window.rootViewController = rootVC;
     return YES;
 }
 

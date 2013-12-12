@@ -14,6 +14,7 @@
 @synthesize trustButton;
 @synthesize dontTrustButton;
 @synthesize cItemView;
+@synthesize quiz;
 
 - (void)viewDidLoad
 {
@@ -21,11 +22,6 @@
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    [self setNeedsStatusBarAppearanceUpdate];
-#else
-#endif
-	
     // instantiate UI elements here
     trustLabel = [[UILabel alloc] init];
     trustLabel.text = @"Do you trust this?";
@@ -60,19 +56,30 @@
     [self.view addSubview:cItemView];
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle
+- (void)viewDidUnload
 {
+    quiz = nil;
+    trustLabel = nil;
+    trustButton = nil;
+    dontTrustButton = nil;
+    cItemView = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // show navigation bar
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+        
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
-    return UIStatusBarStyleLightContent;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 #else
-    return UIStatusBarStyleDefault;
 #endif
 }
 
 - (void)viewWillLayoutSubviews
 {
     // position UI elements here
-    trustLabel.frame = CGRectMake((1024-400)/2, 50, 400, 44);
+    trustLabel.frame = CGRectMake((1024-400)/2, 100, 400, 44);
     trustButton.frame = CGRectMake(1024/2 - 310, 600, 300, 44);
     dontTrustButton.frame = CGRectMake(1024/2 + 10, 600, 300, 44);
     CGRect frame = cItemView.frame;
@@ -86,24 +93,24 @@
 
 - (void)trustButtonPressed:(id)sender
 {
-    // switch view to quiz results
-    GPQuizResultsViewController *quizResultsVC = [[GPQuizResultsViewController alloc] init];
-    
-    // seed quiz
-    // TODO pass result to next view controller
-
-    [self presentViewController:quizResultsVC animated:YES completion:nil];
+    [self exitQuiz];
 }
 
 - (void)dontTrustButtonPressed:(id)sender
 {
-    // switch view to quiz results
+    [self exitQuiz];
+}
+
+- (void)exitQuiz
+{
+    // exit quiz and move to quiz results
     GPQuizResultsViewController *quizResultsVC = [[GPQuizResultsViewController alloc] init];
     
-    // seed quiz
-    // TODO pass result to next view controller
-    
-    [self presentViewController:quizResultsVC animated:YES completion:nil];
+    // pass quiz to quiz results
+    quizResultsVC.quiz = quiz;
+        
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:quizResultsVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
