@@ -145,7 +145,6 @@
 #else
     return UIStatusBarStyleDefault;
 #endif
-
 }
 
 - (void)viewWillLayoutSubviews
