@@ -70,7 +70,7 @@
     [tryAgainButton setTitle:@"Try again" forState:UIControlStateNormal];
     tryAgainButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
     [tryAgainButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [tryAgainButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
+    [tryAgainButton setBackgroundImage:BLUE_BUTTON_IMAGE forState:UIControlStateNormal];
     [tryAgainButton addTarget:self action:@selector(tryAgainButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:tryAgainButton];
     

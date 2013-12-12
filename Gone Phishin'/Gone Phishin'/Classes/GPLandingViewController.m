@@ -10,6 +10,7 @@
 
 @implementation GPLandingViewController
 
+@synthesize scrollView;
 @synthesize titleLabel;
 @synthesize imageView;
 @synthesize bylineLabel;
@@ -37,11 +38,17 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    // scroll view
+    scrollView = [[UIScrollView alloc] init];
+    scrollView.scrollEnabled = NO;
+    scrollView.bounces = NO;
+    [self.view addSubview:scrollView];
+    
     // logo
     UIImage *image = [UIImage imageNamed:@"landing-logo.png"];
     imageView = [[UIImageView alloc] initWithImage:image];
     imageView.contentMode = UIViewContentModeCenter;
-    [self.view addSubview:imageView];
+    [scrollView addSubview:imageView];
     
     // title label
     titleLabel = [[UILabel alloc] init];
@@ -49,7 +56,7 @@
     titleLabel.font = [UIFont fontWithName:MARKER_FONT size:60.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:titleLabel];
+    [scrollView addSubview:titleLabel];
     
     // byline label
     bylineLabel = [[UILabel alloc] init];
@@ -57,7 +64,7 @@
     bylineLabel.font = [UIFont fontWithName:MARKER_FONT size:25.0];
     bylineLabel.textColor = [UIColor whiteColor];
     bylineLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:bylineLabel];
+    [scrollView addSubview:bylineLabel];
     
     // instruction label
     instructionLabel = [[UILabel alloc] init];
@@ -67,7 +74,7 @@
     instructionLabel.numberOfLines = 0;
     instructionLabel.textColor = BLUETEXT_COLOR;
     instructionLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:instructionLabel];
+    [scrollView addSubview:instructionLabel];
     
     // name field label
     nameFieldLabel = [[UILabel alloc] init];
@@ -75,27 +82,32 @@
     nameFieldLabel.font = [UIFont fontWithName:MARKER_FONT size:25.0];
     nameFieldLabel.textColor = BLUETEXT_COLOR;
     nameFieldLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:nameFieldLabel];
+    [scrollView addSubview:nameFieldLabel];
     
     // name field
     nameField = [[UITextField alloc] init];
     nameField.borderStyle = UITextBorderStyleRoundedRect;
-    nameField.font = [UIFont fontWithName:DEFAULT_FONT size:48.0];
+    nameField.font = [UIFont fontWithName:DEFAULT_FONT size:40.0];
     nameField.autocorrectionType = UITextAutocorrectionTypeNo;
-    nameField.backgroundColor = [UIColor colorWithRed:204/255.0 green:229/255.0 blue:255/255.0 alpha:1.0];
-    [self.view addSubview:nameField];
+    nameField.backgroundColor = LIGHTBLUEBG_COLOR;
+    nameField.returnKeyType = UIReturnKeyGo;
+    // hack to add padding
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
+    nameField.leftView = paddingView;
+    nameField.leftViewMode = UITextFieldViewModeAlways;
+    [scrollView addSubview:nameField];
     
     // take quiz button
     quizButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [quizButton setTitle:@"Take the quiz!" forState:UIControlStateNormal];
     quizButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
+    [quizButton setBackgroundImage:BLUE_BUTTON_IMAGE forState:UIControlStateNormal];
     //[quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
     //[quizButton.layer setBorderWidth:1.0];
     //[quizButton.layer setCornerRadius:10];
     [quizButton addTarget:self action:@selector(takeQuizButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:quizButton];
+    [scrollView addSubview:quizButton];
     
     // high scores button
     scoreButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -104,7 +116,7 @@
     [scoreButton setTitleColor:BLUETEXT_COLOR forState:UIControlStateNormal];
     //[scoreButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(showScoresButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:scoreButton];
+    [scrollView addSubview:scoreButton];
     
     // play audio button
     audioButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -112,7 +124,7 @@
     audioButton.titleLabel.font = [UIFont fontWithName:DEFAULT_FONT size:20.0];
     [audioButton setTitleColor:BLUETEXT_COLOR forState:UIControlStateNormal];
     [audioButton addTarget:self action:@selector(playAudioButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:audioButton];
+    [scrollView addSubview:audioButton];
     
     // load instructions audio
     NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
@@ -162,6 +174,9 @@
 
 - (void)viewWillLayoutSubviews
 {
+    scrollView.frame =       self.view.frame;
+    scrollView.contentSize = self.view.frame.size;
+    
     titleLabel.frame =       CGRectMake(450, 180, 500, 80);
     bylineLabel.frame =      CGRectMake(450, 260, 500, 36);
     instructionLabel.frame = CGRectMake(450, 300, 500, 100);
@@ -237,7 +252,7 @@
 }
 
 #pragma mark -
-#pragma mark Delegates
+#pragma mark AVAudioPlayer Delegate
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
@@ -245,24 +260,32 @@
 }
 
 #pragma mark -
+#pragma mark UITextField Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self takeQuizButtonPressed:nil];
+    return NO;
+}
+
+#pragma mark -
 #pragma mark Notifications
 
 - (void)keyboardWasShown:(NSNotification *)notification
 {
-    // get the size of the keyboard
     keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    // adjust the bottom content inset of scroll view by the keyboard height.
-    //UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    // scroll the view by adding the keyboard width + some padding
+    // using width because we are in landscape mode
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.width + 90, 0.0);
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-    // get the size of the keyboard
-    keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
-    // adjust the bottom content inset of scroll view by the keyboard height.
-    //UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+    scrollView.contentInset = UIEdgeInsetsZero;
+    scrollView.scrollIndicatorInsets = UIEdgeInsetsZero;
 }
 
 @end

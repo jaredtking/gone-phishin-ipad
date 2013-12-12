@@ -13,12 +13,12 @@
 
 #define BACKGROUND_COLOR [UIColor colorWithRed:0/255.0 green:76/255.0 blue:153/255.0 alpha:1.0]
 #define BLUETEXT_COLOR [UIColor colorWithRed:204/255.0 green:204/255.0 blue:255/255.0 alpha:1.0]
+#define LIGHTBLUEBG_COLOR [UIColor colorWithRed:204/255.0 green:229/255.0 blue:255/255.0 alpha:1.0]
 
 #define MARKER_FONT @"Komika Hand"
 #define DEFAULT_FONT @"MarkerFelt-Thin"
-//#define DEFAULT_FONT @"HelveticaNeue"
 
-#define TAKE_QUIZ_BUTTON_IMAGE [UIImage \
+#define BLUE_BUTTON_IMAGE [UIImage \
     imageWith2ToneGradient:[UIColor \
         colorWithRed:20/255.0 \
         green:147/255.0 \

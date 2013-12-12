@@ -37,7 +37,7 @@
     goHomeButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
     //    [goHomeButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [goHomeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [goHomeButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
+    [goHomeButton setBackgroundImage:BLUE_BUTTON_IMAGE forState:UIControlStateNormal];
     [goHomeButton addTarget:self action:@selector(goHomeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:goHomeButton];
 }

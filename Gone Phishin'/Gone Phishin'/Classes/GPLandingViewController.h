@@ -15,10 +15,11 @@
 #import "GPRootViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface GPLandingViewController : UIViewController<AVAudioPlayerDelegate>
+@interface GPLandingViewController : UIViewController<AVAudioPlayerDelegate,UITextFieldDelegate>
 {
 @private
     CGSize keyboardSize;
+    UITextField *activeField;
 }
 
 - (void)resignKeyboard:(id)sender;
@@ -26,6 +27,7 @@
 - (void)showScoresButtonPressed:(id) sender;
 - (void)playAudioButtonPressed:(id) sender;
 
+@property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UILabel *bylineLabel;
 @property (strong, nonatomic) UILabel *instructionLabel;
