@@ -190,8 +190,17 @@
 
 - (void)takeQuizButtonPressed:(id)sender
 {
+    // validate the name
+    NSString *name = [nameField text];
+    if ([name length] == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You need to input a name first" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
     // create a quiz
-    GPQuiz *quiz = [[GPQuiz alloc] initWithName:[nameField text]];
+    GPQuiz *quiz = [[GPQuiz alloc] initWithName:name];
     
     // create first content item view
     GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
