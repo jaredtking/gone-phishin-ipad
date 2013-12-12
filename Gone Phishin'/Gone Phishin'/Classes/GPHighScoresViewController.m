@@ -44,7 +44,9 @@
 
 - (void)viewDidUnload
 {
-    
+    scoresLabel = nil;
+    scoresTableView = nil;
+    goHomeButton = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

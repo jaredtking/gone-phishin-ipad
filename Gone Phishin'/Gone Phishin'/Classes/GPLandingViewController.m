@@ -29,8 +29,8 @@
     NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
     NSAssert(audioUrl,@"URL is valid.");
     NSError* error = nil;
-    self.instructAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:audioUrl error:&error];
-    if(!(self.instructAudio))
+    instructAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:audioUrl error:&error];
+    if(!(instructAudio))
     {
         NSLog(@"Error creating player: %@",error);
     }
@@ -130,7 +130,17 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.instructAudio = nil;
+    
+    titleLabel = nil;
+    bylineLabel = nil;
+    instructionLabel = nil;
+    nameFieldLabel = nil;
+    quizButton = nil;
+    imageView = nil;
+    scoreButton = nil;
+    audioButton = nil;
+    nameField = nil;
+    instructAudio = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -195,14 +205,14 @@
 
 - (void)playAudioButtonPressed:(id)sender
 {
-    if(self.instructAudio.playing == YES)
+    if(instructAudio.playing == YES)
     {
-        [self.instructAudio stop];
-        self.instructAudio.currentTime = 0;
+        [instructAudio stop];
+        instructAudio.currentTime = 0;
     }
     else
     {
-        [self.instructAudio play];
+        [instructAudio play];
     }
 }
 

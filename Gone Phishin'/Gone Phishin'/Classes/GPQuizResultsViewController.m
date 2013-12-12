@@ -85,7 +85,12 @@
 
 - (void)viewDidUnload
 {
-    
+    quiz = nil;
+    ratingLabel = nil;
+    countLabel = nil;
+    compareLabel = nil;
+    tryAgainButton = nil;
+    viewHighScoresButton = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

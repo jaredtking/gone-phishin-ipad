@@ -159,24 +159,21 @@
 		7DAA61611836B6FC001AFBDF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */,
-				7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */,
 				7DAA616D1836B767001AFBDF /* GPAppDelegate.h */,
 				7DAA616E1836B767001AFBDF /* GPAppDelegate.m */,
-				7DAA61791836BA45001AFBDF /* GPLandingViewController.h */,
-				7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */,
 				7D68C0B71853F43000425692 /* GPContentItemViewController.h */,
 				7D68C0B81853F43000425692 /* GPContentItemViewController.m */,
-				7D68C0BA1853F4A400425692 /* GPScore.h */,
-				7D68C0BB1853F4A400425692 /* GPScore.m */,
-				7D68C0BD1853F7C600425692 /* GPQuiz.h */,
-				7D68C0BE1853F7C600425692 /* GPQuiz.m */,
-				7D68C0C01853F84300425692 /* GPQuizResultsViewController.h */,
-				7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */,
 				7D68C0C31853F85100425692 /* GPHighScoresViewController.h */,
 				7D68C0C41853F85100425692 /* GPHighScoresViewController.m */,
+				7DAA61791836BA45001AFBDF /* GPLandingViewController.h */,
+				7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */,
+				7D68C0C01853F84300425692 /* GPQuizResultsViewController.h */,
+				7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */,
 				7FB6CE01185A4911000B4327 /* GPRootViewController.h */,
 				7FB6CE02185A4911000B4327 /* GPRootViewController.m */,
+				7FB6CE04185A6130000B4327 /* Models */,
+				7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */,
+				7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -218,6 +215,17 @@
 				7DAA61691836B74E001AFBDF /* Default@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		7FB6CE04185A6130000B4327 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D68C0BA1853F4A400425692 /* GPScore.h */,
+				7D68C0BB1853F4A400425692 /* GPScore.m */,
+				7D68C0BD1853F7C600425692 /* GPQuiz.h */,
+				7D68C0BE1853F7C600425692 /* GPQuiz.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		7FC71D211853C3E2007377EF /* Icons */ = {
