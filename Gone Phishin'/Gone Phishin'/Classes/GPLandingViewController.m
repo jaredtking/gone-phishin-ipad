@@ -25,16 +25,6 @@
 {
     [super viewDidLoad];
     
-    // load instructions audio
-    NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
-    NSAssert(audioUrl,@"URL is valid.");
-    NSError* error = nil;
-    instructAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:audioUrl error:&error];
-    if(!(instructAudio))
-    {
-        NSLog(@"Error creating player: %@",error);
-    }
-    
     [self.view setBackgroundColor:BACKGROUND_COLOR];
     
     // hide the keyboard when tapped outside
@@ -98,8 +88,7 @@
     // take quiz button
     quizButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [quizButton setTitle:@"Take the quiz!" forState:UIControlStateNormal];
-    quizButton.titleLabel.font =[UIFont fontWithName:MARKER_FONT size:24.0];
-    //    [quizButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
+    quizButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
     //[quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
@@ -122,9 +111,19 @@
     [audioButton setTitle:@"audio instructions" forState:UIControlStateNormal];
     audioButton.titleLabel.font = [UIFont fontWithName:DEFAULT_FONT size:20.0];
     [audioButton setTitleColor:BLUETEXT_COLOR forState:UIControlStateNormal];
-    //[audioButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
     [audioButton addTarget:self action:@selector(playAudioButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:audioButton];
+    
+    // load instructions audio
+    NSURL* audioUrl  = [[NSBundle mainBundle] URLForResource:@"instructions" withExtension:@"wav"];
+    NSAssert(audioUrl,@"URL is valid.");
+    NSError* error = nil;
+    instructAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:audioUrl error:&error];
+    if(!(instructAudio))
+    {
+        NSLog(@"Error creating player: %@",error);
+    }
+    [instructAudio setDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -142,6 +141,13 @@
     nameField = nil;
     instructAudio = nil;
 }
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -165,7 +171,7 @@
     nameField.frame =        CGRectMake(450, 450, 500, 50);
     
     quizButton.frame =       CGRectMake(450, 520, 200, 50);
-    scoreButton.frame =      CGRectMake(450, 570, 200, 50);
+    scoreButton.frame =      CGRectMake(450, 600, 200, 50);
     audioButton.frame =      CGRectMake(804, 698, 200, 50);
     
     CGRect frame = imageView.frame;
@@ -178,6 +184,9 @@
 {
     [nameField resignFirstResponder];
 }
+
+#pragma mark -
+#pragma mark Button Presses
 
 - (void)takeQuizButtonPressed:(id)sender
 {
@@ -209,12 +218,25 @@
     {
         [instructAudio stop];
         instructAudio.currentTime = 0;
+        [audioButton setTitle:@"audio instructions" forState:UIControlStateNormal];
     }
     else
     {
         [instructAudio play];
+        [audioButton setTitle:@"stop" forState:UIControlStateNormal];
     }
 }
+
+#pragma mark -
+#pragma mark Delegates
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [audioButton setTitle:@"audio instructions" forState:UIControlStateNormal];
+}
+
+#pragma mark -
+#pragma mark Notifications
 
 - (void)keyboardWasShown:(NSNotification *)notification
 {
@@ -232,12 +254,6 @@
     
     // adjust the bottom content inset of scroll view by the keyboard height.
     //UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

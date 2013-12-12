@@ -15,7 +15,7 @@
 #import "GPRootViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface GPLandingViewController : UIViewController
+@interface GPLandingViewController : UIViewController<AVAudioPlayerDelegate>
 {
 @private
     CGSize keyboardSize;
