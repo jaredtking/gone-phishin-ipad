@@ -91,6 +91,7 @@
     nameField.autocorrectionType = UITextAutocorrectionTypeNo;
     nameField.backgroundColor = LIGHTBLUEBG_COLOR;
     nameField.returnKeyType = UIReturnKeyGo;
+    nameField.delegate = self;
     // hack to add padding
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 20)];
     nameField.leftView = paddingView;
@@ -103,9 +104,6 @@
     quizButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [quizButton setBackgroundImage:BLUE_BUTTON_IMAGE forState:UIControlStateNormal];
-    //[quizButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
-    //[quizButton.layer setBorderWidth:1.0];
-    //[quizButton.layer setCornerRadius:10];
     [quizButton addTarget:self action:@selector(takeQuizButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:quizButton];
     
@@ -114,7 +112,6 @@
     [scoreButton setTitle:@"view the high scores" forState:UIControlStateNormal];
     scoreButton.titleLabel.font = [UIFont fontWithName:DEFAULT_FONT size:20.0];
     [scoreButton setTitleColor:BLUETEXT_COLOR forState:UIControlStateNormal];
-    //[scoreButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(showScoresButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:scoreButton];
     

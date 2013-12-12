@@ -111,12 +111,12 @@
 
 - (void)trustButtonPressed:(id)sender
 {
-    [self finishQuiz];
+    [self nextQuestion];
 }
 
 - (void)dontTrustButtonPressed:(id)sender
 {
-    [self finishQuiz];
+    [self nextQuestion];
 }
 
 #pragma mark -
@@ -124,6 +124,9 @@
 
 - (void)nextQuestion
 {
+    if ([quiz atEnd])
+        return [self finishQuiz];
+    
     
 }
 

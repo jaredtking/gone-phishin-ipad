@@ -19,6 +19,10 @@
 - (void)seed;
 - (NSString *)getName;
 - (int)getQuestionNo;
+- (BOOL)atEnd;
+- (int)numCorrect;
+- (float)percentCorrect;
+
 - (void)setQuestionNo:(int)n;
 
 @end

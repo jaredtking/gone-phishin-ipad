@@ -32,9 +32,31 @@
     return name;
 }
 
+- (int)numQuestions
+{
+    // TOOD
+    return 1;
+}
+
 - (int)getQuestionNo
 {
     return questionNo;
+}
+
+- (BOOL)atEnd
+{
+    return questionNo >= [self numQuestions];
+}
+
+- (int)numCorrect
+{
+    // TODO
+    return 0;
+}
+
+- (float)percentCorrect
+{
+    return (float)[self numCorrect] / [self numQuestions];
 }
 
 #pragma mark -
