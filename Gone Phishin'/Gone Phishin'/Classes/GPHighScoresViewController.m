@@ -10,6 +10,8 @@
 
 @implementation GPHighScoresViewController
 
+@synthesize scoresLabel;
+@synthesize scoresTableView;
 @synthesize goHomeButton;
 
 - (void)viewDidLoad
@@ -24,6 +26,17 @@
 #endif
 	
     // instantiate UI elements here
+    scoresLabel = [[UILabel alloc] init];
+    scoresLabel.text = @"High Scores";
+    scoresLabel.font = [UIFont fontWithName:MARKER_FONT size:30.0];
+    scoresLabel.textColor = [UIColor whiteColor];
+    scoresLabel.backgroundColor = [UIColor clearColor];
+    scoresLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:scoresLabel];
+    
+    //TO-DO: set up the scores table, with the data
+    scoresTableView = [[UITableView alloc] init];
+    
     goHomeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [goHomeButton setTitle:@"Return to Home" forState:UIControlStateNormal];
     goHomeButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
@@ -37,7 +50,9 @@
 - (void)viewWillLayoutSubviews
 {
     // position UI elements here
-    goHomeButton.frame = CGRectMake(100, 100, 200, 44);
+    scoresLabel.frame = CGRectMake((1024-300)/2, 150, 300, 44);
+    scoresTableView.frame = CGRectMake((1024-500)/2, 200, 500, 300);
+    goHomeButton.frame = CGRectMake((1024-500)/2, 600, 500, 44);
 }
 
 - (void)goHomeButtonPressed:(id)sender

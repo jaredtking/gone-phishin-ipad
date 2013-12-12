@@ -61,7 +61,7 @@
     // title label
     titleLabel = [[UILabel alloc] init];
     titleLabel.text = @"Gone Phishing";
-    titleLabel.font = [UIFont fontWithName:@"Komika Hand" size:60.0];
+    titleLabel.font = [UIFont fontWithName:MARKER_FONT size:60.0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:titleLabel];
@@ -69,7 +69,7 @@
     // byline label
     bylineLabel = [[UILabel alloc] init];
     bylineLabel.text = @"\"A fine kettle of phish since 2013\"";
-    bylineLabel.font = [UIFont fontWithName:@"Komika Hand" size:25.0];
+    bylineLabel.font = [UIFont fontWithName:MARKER_FONT size:25.0];
     bylineLabel.textColor = [UIColor whiteColor];
     bylineLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:bylineLabel];
@@ -77,7 +77,7 @@
     // instruction label
     instructionLabel = [[UILabel alloc] init];
     instructionLabel.text = @"Test your skills at detecting suspicious content by taking our quiz.";
-    instructionLabel.font = [UIFont fontWithName:@"Komika Hand" size:20.0];
+    instructionLabel.font = [UIFont fontWithName:MARKER_FONT size:20.0];
     instructionLabel.lineBreakMode = NSLineBreakByWordWrapping;
     instructionLabel.numberOfLines = 0;
     instructionLabel.textColor = BLUETEXT_COLOR;
@@ -87,7 +87,7 @@
     // name field label
     nameFieldLabel = [[UILabel alloc] init];
     nameFieldLabel.text = @"What is your name?";
-    nameFieldLabel.font = [UIFont fontWithName:@"Komika Hand" size:25.0];
+    nameFieldLabel.font = [UIFont fontWithName:MARKER_FONT size:25.0];
     nameFieldLabel.textColor = BLUETEXT_COLOR;
     nameFieldLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:nameFieldLabel];
@@ -103,7 +103,7 @@
     // take quiz button
     quizButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [quizButton setTitle:@"Take the quiz!" forState:UIControlStateNormal];
-    quizButton.titleLabel.font =[UIFont fontWithName:@"Komika Hand" size:24.0];
+    quizButton.titleLabel.font =[UIFont fontWithName:MARKER_FONT size:24.0];
     //    [quizButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [quizButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [quizButton setBackgroundImage:TAKE_QUIZ_BUTTON_IMAGE forState:UIControlStateNormal];

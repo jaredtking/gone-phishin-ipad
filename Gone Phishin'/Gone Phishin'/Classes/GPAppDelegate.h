@@ -13,12 +13,14 @@
 #define BACKGROUND_COLOR [UIColor colorWithRed:0/255.0 green:76/255.0 blue:153/255.0 alpha:1.0]
 #define BLUETEXT_COLOR [UIColor colorWithRed:204/255.0 green:204/255.0 blue:255/255.0 alpha:1.0]
 
+#define MARKER_FONT @"Komika Hand"
 #define DEFAULT_FONT @"MarkerFelt-Thin"
+//#define DEFAULT_FONT @"HelveticaNeue"
 
 #define TAKE_QUIZ_BUTTON_IMAGE [UIImage \
     imageWith2ToneGradient:[UIColor \
-        colorWithRed:0/255.0 \
-        green:127/255.0 \
+        colorWithRed:20/255.0 \
+        green:147/255.0 \
         blue:255/255.0 \
         alpha:1.0] \
     tone2:[UIColor \
@@ -28,6 +30,31 @@
         alpha:1.0] \
     height:100]
 
+#define GREEN_BUTTON_IMAGE [UIImage \
+imageWith2ToneGradient:[UIColor \
+colorWithRed:20/255.0 \
+green:255/255.0 \
+blue:20/255.0 \
+alpha:1.0] \
+tone2:[UIColor \
+colorWithRed:0/255.0 \
+green:255/255.0 \
+blue:0/255.0 \
+alpha:1.0] \
+height:100]
+
+#define RED_BUTTON_IMAGE [UIImage \
+imageWith2ToneGradient:[UIColor \
+colorWithRed:255/255.0 \
+green:20/255.0 \
+blue:20/255.0 \
+alpha:1.0] \
+tone2:[UIColor \
+colorWithRed:255/255.0 \
+green:0/255.0 \
+blue:0/255.0 \
+alpha:1.0] \
+height:100]
 
 @interface GPAppDelegate : UIResponder <UIApplicationDelegate>
 

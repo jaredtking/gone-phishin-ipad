@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3656EA18594E100062EE10 /* cItem1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3656E618594E100062EE10 /* cItem1.png */; };
+		7D3656EB18594E100062EE10 /* cItem2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3656E718594E100062EE10 /* cItem2.png */; };
+		7D3656EC18594E100062EE10 /* cItem3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3656E818594E100062EE10 /* cItem3.png */; };
+		7D3656ED18594E100062EE10 /* cItem4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D3656E918594E100062EE10 /* cItem4.png */; };
 		7D68C0B11853E67000425692 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */; };
 		7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */; };
 		7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D3656E618594E100062EE10 /* cItem1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cItem1.png; sourceTree = "<group>"; };
+		7D3656E718594E100062EE10 /* cItem2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cItem2.png; sourceTree = "<group>"; };
+		7D3656E818594E100062EE10 /* cItem3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cItem3.png; sourceTree = "<group>"; };
+		7D3656E918594E100062EE10 /* cItem4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cItem4.png; sourceTree = "<group>"; };
 		7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		7D68C0B41853EF7100425692 /* UIImage+JTKGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTKGradient.h"; sourceTree = "<group>"; };
@@ -192,6 +200,10 @@
 		7DAA61661836B74E001AFBDF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				7D3656E618594E100062EE10 /* cItem1.png */,
+				7D3656E718594E100062EE10 /* cItem2.png */,
+				7D3656E818594E100062EE10 /* cItem3.png */,
+				7D3656E918594E100062EE10 /* cItem4.png */,
 				7FC71D411853D1ED007377EF /* landing-logo.png */,
 				7FC71D3F1853CEDF007377EF /* wolverine_logo_transparent.png */,
 				7FC71D3A1853C8EA007377EF /* Splash */,
@@ -296,6 +308,10 @@
 				7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */,
 				7D7797EA1857F91C002241FD /* instructions.wav in Resources */,
 				7D7797EC1857F934002241FD /* Komika_Hand.ttf in Resources */,
+				7D3656EA18594E100062EE10 /* cItem1.png in Resources */,
+				7D3656EB18594E100062EE10 /* cItem2.png in Resources */,
+				7D3656EC18594E100062EE10 /* cItem3.png in Resources */,
+				7D3656ED18594E100062EE10 /* cItem4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

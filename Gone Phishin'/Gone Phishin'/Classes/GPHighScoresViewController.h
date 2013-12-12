@@ -12,6 +12,8 @@
 
 @interface GPHighScoresViewController : UIViewController
 
+@property (strong, nonatomic) UILabel *scoresLabel;
+@property (strong, nonatomic) UITableView *scoresTableView;
 @property (strong, nonatomic) UIButton *goHomeButton;
 
 - (void)goHomeButtonPressed:(id)sender;

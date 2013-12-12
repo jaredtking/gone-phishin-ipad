@@ -13,8 +13,12 @@
 @interface GPContentItemViewController : UIViewController
 
 // add UI element properties here
+@property (strong, nonatomic) UILabel *trustLabel;
 @property (strong, nonatomic) UIButton *trustButton;
+@property (strong, nonatomic) UIButton *dontTrustButton;
+@property (strong, nonatomic) UIImageView *cItemView;
 
 - (void)trustButtonPressed:(id)sender;
+- (void)dontTrustButtonPressed:(id)sender;
 
 @end
