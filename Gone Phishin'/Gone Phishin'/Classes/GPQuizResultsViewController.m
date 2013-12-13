@@ -24,24 +24,24 @@
     [self.view setBackgroundColor:BACKGROUND_COLOR];
 	
     //TO-DO: determine user score, and ranking in high score list (-1 if not ranked)
-    int numCorrect = 4;
-    int totalQuestions = 25;
+    int numCorrect = [quiz numCorrect];
+    int totalQuestions = [quiz numQuestions];
     int highScorePlace = 4;
-    float myScore = ((float)numCorrect)/totalQuestions;
+    float myScore = [quiz percentCorrect];
     
     // instantiate UI elements here
     ratingLabel = [[UILabel alloc] init];
     
     if(myScore < 0.2)
-        ratingLabel.text = @"Bummer. You are a fish out of water.";
+        ratingLabel.text = @"Ouch. You have been phished.";
     else if (myScore < 0.4)
-        ratingLabel.text = @"Bummer. You are a .";
+        ratingLabel.text = @"Bummer. You are a fish out of water.";
     else if (myScore < 0.6)
-        ratingLabel.text = @"Nice. You are a .";
+        ratingLabel.text = @"Nice. You sometimes escaped the fishermen.";
     else if (myScore < 0.8)
-        ratingLabel.text = @"Cool! You are a .";
+        ratingLabel.text = @"Good job! You are almost safe.";
     else
-        ratingLabel.text = @"Radical! You are a fish out of water.";
+        ratingLabel.text = @"Radical! You could be a fisherman yourself.";
     ratingLabel.font = [UIFont fontWithName:MARKER_FONT size:20.0];
     ratingLabel.textColor = BLUETEXT_COLOR;
     ratingLabel.backgroundColor = [UIColor clearColor];
@@ -129,13 +129,14 @@
     GPQuiz *newQuiz = [[GPQuiz alloc] initWithName:[quiz getName]];
     
     // create first content item view
-    GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
+    GPContentItemViewController *firstQuestionVC = [[GPContentItemViewController alloc] init];
     
     // pass quiz onto first content item view controller
-    contentItemVC.quiz = newQuiz;
+    firstQuestionVC.quiz = newQuiz;
+    firstQuestionVC.questionNo = 1;
     
-    // push new view onto navigation stack
-    [self.navigationController pushViewController:contentItemVC animated:YES];
+    // finally present the navigation controller
+    [self.navigationController pushViewController:firstQuestionVC animated:YES];
 }
 
 - (void)viewHighScoresButtonPressed:(id)sender

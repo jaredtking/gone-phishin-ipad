@@ -7,22 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSMutableArray_Shuffling.h"
 
 @interface GPQuiz : NSObject
 {
 @private
     NSString *name;
-    int questionNo;
+    NSMutableArray *questions;
+    NSMutableArray *answers;
 }
 
 - (id)initWithName:(NSString *)quizTakersName;
-- (void)seed;
+
 - (NSString *)getName;
-- (int)getQuestionNo;
-- (BOOL)atEnd;
+- (NSString *)getImageNameForQuestion:(int)n;
+- (int)numQuestions;
 - (int)numCorrect;
 - (float)percentCorrect;
 
-- (void)setQuestionNo:(int)n;
+- (void)setAnswerForQuestion:(int)n :(BOOL)trusts;
 
 @end

@@ -215,13 +215,14 @@
     GPQuiz *quiz = [[GPQuiz alloc] initWithName:name];
     
     // create first content item view
-    GPContentItemViewController *contentItemVC = [[GPContentItemViewController alloc] init];
+    GPContentItemViewController *firstQuestionVC = [[GPContentItemViewController alloc] init];
     
     // pass quiz onto first content item view controller
-    contentItemVC.quiz = quiz;
+    firstQuestionVC.quiz = quiz;
+    firstQuestionVC.questionNo = 1;
     
     // finally present the navigation controller
-    [self.navigationController pushViewController:contentItemVC animated:YES];
+    [self.navigationController pushViewController:firstQuestionVC animated:YES];
 }
 
 - (void)showScoresButtonPressed:(id)sender

@@ -27,7 +27,7 @@
     tone2:[UIColor \
         colorWithRed:0/255.0 \
         green:127/255.0 \
-        blue:200/255.0 \
+        blue:225/255.0 \
         alpha:1.0] \
     height:100]
 
@@ -51,7 +51,7 @@ green:20/255.0 \
 blue:20/255.0 \
 alpha:1.0] \
 tone2:[UIColor \
-colorWithRed:200/255.0 \
+colorWithRed:225/255.0 \
 green:0/255.0 \
 blue:0/255.0 \
 alpha:1.0] \

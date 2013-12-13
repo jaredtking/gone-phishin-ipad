@@ -13,6 +13,7 @@
 
 @interface GPContentItemViewController : UIViewController<UIAlertViewDelegate>
 
+@property int questionNo;
 @property (strong, nonatomic) GPQuiz *quiz;
 
 // add UI element properties here

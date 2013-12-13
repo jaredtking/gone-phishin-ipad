@@ -47,14 +47,14 @@
     [dontTrustButton addTarget:self action:@selector(dontTrustButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:dontTrustButton];
     
-    // logo
-    UIImage *content = [UIImage imageNamed:@"cItem1.png"];
+    // content item
+    UIImage *content = [UIImage imageNamed:[quiz getImageNameForQuestion:self.questionNo]];
     cItemView = [[UIImageView alloc] initWithImage:content];
-    cItemView.contentMode = UIViewContentModeCenter;
+    cItemView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:cItemView];
     
     // remove back button for first question
-    [self.navigationItem setHidesBackButton:[quiz getQuestionNo] == 1];
+    [self.navigationItem setHidesBackButton:self.questionNo == 1];
 
     // end quiz button
     UIBarButtonItem *endQuizItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelButtonPressed:)];
@@ -111,11 +111,21 @@
 
 - (void)trustButtonPressed:(id)sender
 {
+    [quiz setAnswerForQuestion:self.questionNo :YES];
+
+    // perform fish animation here
+    // TODO
+
     [self nextQuestion];
 }
 
 - (void)dontTrustButtonPressed:(id)sender
 {
+    [quiz setAnswerForQuestion:self.questionNo :NO];
+    
+    // perform fish animation here
+    // TODO
+    
     [self nextQuestion];
 }
 
@@ -124,10 +134,17 @@
 
 - (void)nextQuestion
 {
-    if ([quiz atEnd])
+    if (self.questionNo >= [quiz numQuestions])
         return [self finishQuiz];
     
+    GPContentItemViewController *nextQuestionVC = [[GPContentItemViewController alloc] init];
     
+    // pass on quiz and question number
+    nextQuestionVC.quiz = quiz;
+    nextQuestionVC.questionNo = self.questionNo + 1;
+    
+    // push new view onto navigation stack
+    [self.navigationController pushViewController:nextQuestionVC animated:YES];
 }
 
 - (void)finishQuiz
