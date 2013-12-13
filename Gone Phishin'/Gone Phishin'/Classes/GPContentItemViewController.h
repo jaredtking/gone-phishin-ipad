@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UIButton *trustButton;
 @property (strong, nonatomic) UIButton *dontTrustButton;
 @property (strong, nonatomic) UIImageView *cItemView;
+@property (strong, nonatomic) UIImageView *fishView;
 
 - (void)cancelButtonPressed:(id)sender;
 - (void)trustButtonPressed:(id)sender;

@@ -10,11 +10,12 @@
 
 @implementation GPContentItemViewController
 
+@synthesize quiz;
 @synthesize trustLabel;
 @synthesize trustButton;
 @synthesize dontTrustButton;
 @synthesize cItemView;
-@synthesize quiz;
+@synthesize fishView;
 
 - (void)viewDidLoad
 {
@@ -52,6 +53,12 @@
     cItemView = [[UIImageView alloc] initWithImage:content];
     cItemView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:cItemView];
+    
+    // animated fish
+	UIImage *fish = [UIImage imageNamed:@"fish.png"];
+	fishView = [[UIImageView alloc] initWithImage:fish];
+    fishView.contentMode = UIViewContentModeScaleAspectFit;
+	[self.view addSubview:fishView];
     
     // remove back button for first question
     [self.navigationItem setHidesBackButton:self.questionNo == 1];
@@ -96,6 +103,8 @@
     frame.size.width = content.size.width;
     frame.size.height = content.size.height;
     cItemView.frame = frame;
+    
+	[fishView setFrame:CGRectOffset([fishView frame], self.view.frame.size.width+fishView.frame.size.width, (self.view.frame.size.height - fishView.frame.size.height) / 2)];
 }
 
 #pragma mark -
@@ -113,18 +122,12 @@
 {
     [quiz setAnswerForQuestion:self.questionNo :YES];
 
-    // perform fish animation here
-    // TODO
-
     [self nextQuestion];
 }
 
 - (void)dontTrustButtonPressed:(id)sender
 {
     [quiz setAnswerForQuestion:self.questionNo :NO];
-    
-    // perform fish animation here
-    // TODO
     
     [self nextQuestion];
 }
@@ -134,17 +137,21 @@
 
 - (void)nextQuestion
 {
-    if (self.questionNo >= [quiz numQuestions])
-        return [self finishQuiz];
-    
-    GPContentItemViewController *nextQuestionVC = [[GPContentItemViewController alloc] init];
-    
-    // pass on quiz and question number
-    nextQuestionVC.quiz = quiz;
-    nextQuestionVC.questionNo = self.questionNo + 1;
-    
-    // push new view onto navigation stack
-    [self.navigationController pushViewController:nextQuestionVC animated:YES];
+    [UIView animateWithDuration:2 animations:^{
+        [fishView setFrame:CGRectOffset([fishView frame], -self.view.frame.size.width - (2 * fishView.frame.size.width), 0)];
+    }  completion:^ (BOOL finished) {
+        if (self.questionNo >= [quiz numQuestions])
+            return [self finishQuiz];
+        
+        GPContentItemViewController *nextQuestionVC = [[GPContentItemViewController alloc] init];
+        
+        // pass on quiz and question number
+        nextQuestionVC.quiz = quiz;
+        nextQuestionVC.questionNo = self.questionNo + 1;
+        
+        // push new view onto navigation stack
+        [self.navigationController pushViewController:nextQuestionVC animated:YES];
+    }];
 }
 
 - (void)finishQuiz
