@@ -30,8 +30,6 @@
     [request setEntity:entityDesc];
     NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
     [request setSortDescriptors:[NSArray arrayWithObject:sort]];
-//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(score > %f)", myScore];
-//    [request setPredicate:pred];
     NSError *error;
     scores = [context executeFetchRequest:request error:&error];
     
