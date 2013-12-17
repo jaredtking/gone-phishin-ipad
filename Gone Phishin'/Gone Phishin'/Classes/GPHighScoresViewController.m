@@ -83,7 +83,7 @@
 {
     // position UI elements here
     scoresLabel.frame = CGRectMake((1024-300)/2, 150, 300, 44);
-    scoresTableView.frame = CGRectMake((1024-500)/2, 200, 500, 300);
+    scoresTableView.frame = CGRectMake((1024-300)/2, 200, 300, 300);
     goHomeButton.frame = CGRectMake((1024-500)/2, 600, 500, 44);
 }
 
@@ -127,10 +127,10 @@
         cell.backgroundColor = [UIColor clearColor];
         cell.userInteractionEnabled = NO;
         cell.textLabel.textColor = [UIColor whiteColor];
-        cell.textLabel.font = [UIFont fontWithName:DEFAULT_FONT size:17.0];
+        cell.textLabel.font = [UIFont fontWithName:DEFAULT_FONT size:21.0];
         cell.textLabel.enabled = YES;
         cell.detailTextLabel.textColor = BLUETEXT_COLOR;
-        cell.detailTextLabel.font = [UIFont fontWithName:DEFAULT_FONT size:17.0];
+        cell.detailTextLabel.font = [UIFont fontWithName:DEFAULT_FONT size:21.0];
         cell.detailTextLabel.enabled = YES;
     }
     
