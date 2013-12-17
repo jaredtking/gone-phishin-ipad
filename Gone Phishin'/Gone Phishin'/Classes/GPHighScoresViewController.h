@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "GPAppDelegate.h"
 #import "GPLandingViewController.h"
+#import <CoreData/CoreData.h>
 
-@interface GPHighScoresViewController : UIViewController
+@interface GPHighScoresViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+@private
+    NSArray *scores;
+}
 
 @property (strong, nonatomic) UILabel *scoresLabel;
 @property (strong, nonatomic) UITableView *scoresTableView;

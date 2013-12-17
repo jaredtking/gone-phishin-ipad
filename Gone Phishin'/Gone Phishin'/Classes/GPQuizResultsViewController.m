@@ -17,17 +17,50 @@
 @synthesize viewHighScoresButton;
 @synthesize quiz;
 
+- (NSString *)ordinalSuffix:(int)N
+{
+    if (N >= 11 && N <= 20)
+        return @"th";
+    else if (N % 10 == 1)
+        return @"st";
+    else if (N % 10 == 2)
+        return @"nd";
+    else if (N % 10 == 3)
+        return @"rd";
+    else
+        return @"th";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
-	
-    //TO-DO: determine user score, and ranking in high score list (-1 if not ranked)
+    
+    // grab core data context
+    NSManagedObjectContext *context = [(GPAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    // calculate quiz results
     int numCorrect = [quiz numCorrect];
     int totalQuestions = [quiz numQuestions];
-    int highScorePlace = 4;
-    float myScore = [quiz percentCorrect];
+    double myScore = [quiz percentCorrect];
+    
+    // store score
+    NSManagedObject *newScore = [NSEntityDescription insertNewObjectForEntityForName:@"Scores" inManagedObjectContext:context];
+    [newScore setValue:[quiz getName] forKey:@"name"];
+    [newScore setValue:[NSNumber numberWithDouble:[quiz percentCorrect]] forKey:@"score"];
+    NSError *error;
+    [context save:&error];
+    
+    // determine high score place
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Scores"
+                inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(score > %f)", myScore];
+    [request setPredicate:pred];
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    int highScorePlace = [objects count] + 1;
     
     // instantiate UI elements here
     ratingLabel = [[UILabel alloc] init];
@@ -58,7 +91,7 @@
     
     compareLabel = [[UILabel alloc] init];
     if(highScorePlace > 0)
-        compareLabel.text = [NSString stringWithFormat:@"That was the %dth best attempt on this iPad to date.", highScorePlace];
+        compareLabel.text = [NSString stringWithFormat:@"That was the %d%@ best attempt on this iPad to date.", highScorePlace, [self ordinalSuffix:highScorePlace]];
     compareLabel.font = [UIFont fontWithName:MARKER_FONT size:20.0];
     compareLabel.textColor = BLUETEXT_COLOR;
     compareLabel.backgroundColor = [UIColor clearColor];

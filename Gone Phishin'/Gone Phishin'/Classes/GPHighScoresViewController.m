@@ -20,6 +20,21 @@
     
     [self.view setBackgroundColor:BACKGROUND_COLOR];
     
+    // grab core data context
+    NSManagedObjectContext *context = [(GPAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    // load scores
+    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Scores"
+                                                  inManagedObjectContext:context];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entityDesc];
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:NO];
+    [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+//    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(score > %f)", myScore];
+//    [request setPredicate:pred];
+    NSError *error;
+    scores = [context executeFetchRequest:request error:&error];
+    
     // instantiate UI elements here
     scoresLabel = [[UILabel alloc] init];
     scoresLabel.text = @"High Scores";
@@ -29,13 +44,19 @@
     scoresLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:scoresLabel];
     
-    //TO-DO: set up the scores table, with the data
+    // scores table
     scoresTableView = [[UITableView alloc] init];
+    scoresTableView.dataSource = self;
+    scoresTableView.delegate = self;
+    scoresTableView.backgroundView = nil;
+    scoresTableView.backgroundColor = [UIColor clearColor];
+    scoresTableView.separatorColor = [UIColor clearColor];
+    [self.view addSubview:scoresTableView];
     
+    // go home button
     goHomeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [goHomeButton setTitle:@"Return to Home" forState:UIControlStateNormal];
     goHomeButton.titleLabel.font =[UIFont fontWithName:DEFAULT_FONT size:24.0];
-    //    [goHomeButton setFont:[UIFont fontWithName:DEFAULT_FONT size:24.0]];
     [goHomeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [goHomeButton setBackgroundImage:BLUE_BUTTON_IMAGE forState:UIControlStateNormal];
     [goHomeButton addTarget:self action:@selector(goHomeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -81,5 +102,57 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - 
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [scores count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+        
+        // style
+        cell.backgroundColor = [UIColor clearColor];
+        cell.userInteractionEnabled = NO;
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.textLabel.font = [UIFont fontWithName:DEFAULT_FONT size:17.0];
+        cell.textLabel.enabled = YES;
+        cell.detailTextLabel.textColor = BLUETEXT_COLOR;
+        cell.detailTextLabel.font = [UIFont fontWithName:DEFAULT_FONT size:17.0];
+        cell.detailTextLabel.enabled = YES;
+    }
+    
+
+    NSManagedObject *score = [scores objectAtIndex:[indexPath row]];
+
+    // name
+    cell.textLabel.text = [score valueForKey:@"name"];
+    
+    // score
+    NSNumber *score2 = [NSNumber numberWithDouble:[(NSNumber *)[score valueForKey:@"score"] doubleValue] * 100];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    formatter.maximumFractionDigits = 0;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%@", [formatter stringFromNumber:score2], @"%"];
+    
+    return cell;
+}
+
+#pragma mark -
+#pragma mark Table view delegate
 
 @end

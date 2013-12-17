@@ -71,9 +71,9 @@
     return correct;
 }
 
-- (float)percentCorrect
+- (double)percentCorrect
 {
-    return (float)[self numCorrect] / [self numQuestions];
+    return (double)[self numCorrect] / [self numQuestions];
 }
 
 #pragma mark -

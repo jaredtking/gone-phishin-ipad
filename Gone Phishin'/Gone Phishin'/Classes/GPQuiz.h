@@ -23,7 +23,7 @@
 - (NSString *)getImageNameForQuestion:(int)n;
 - (int)numQuestions;
 - (int)numCorrect;
-- (float)percentCorrect;
+- (double)percentCorrect;
 
 - (void)setAnswerForQuestion:(int)n :(BOOL)trusts;
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GPAppDelegate.h"
 #import "GPHighScoresViewController.h"
+#import <CoreData/CoreData.h>
 
 @interface GPQuizResultsViewController : UIViewController
 

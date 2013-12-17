@@ -15,7 +15,6 @@
 		7D68C0B31853E67600425692 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */; };
 		7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */; };
 		7D68C0B91853F43000425692 /* GPContentItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0B81853F43000425692 /* GPContentItemViewController.m */; };
-		7D68C0BC1853F4A400425692 /* GPScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0BB1853F4A400425692 /* GPScore.m */; };
 		7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0BE1853F7C600425692 /* GPQuiz.m */; };
 		7D68C0C21853F84300425692 /* GPQuizResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C11853F84300425692 /* GPQuizResultsViewController.m */; };
 		7D68C0C51853F85100425692 /* GPHighScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D68C0C41853F85100425692 /* GPHighScoresViewController.m */; };
@@ -32,6 +31,8 @@
 		7DAA61761836B78A001AFBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DAA61711836B78A001AFBDF /* InfoPlist.strings */; };
 		7DAA61781836B78A001AFBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA61751836B78A001AFBDF /* main.m */; };
 		7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */; };
+		7F4327741860A36900919B18 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4327731860A36900919B18 /* CoreData.framework */; };
+		7F4327771860A3B600919B18 /* GPCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F4327751860A3B600919B18 /* GPCoreData.xcdatamodeld */; };
 		7FB6CE03185A4911000B4327 /* GPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6CE02185A4911000B4327 /* GPRootViewController.m */; };
 		7FB6CE07185A7EE1000B4327 /* NSMutableArray_Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB6CE06185A7EE1000B4327 /* NSMutableArray_Shuffling.m */; };
 		7FB6CE09185A889C000B4327 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB6CE08185A889C000B4327 /* fish.png */; };
@@ -56,8 +57,6 @@
 		7D68C0B51853EF7100425692 /* UIImage+JTKGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTKGradient.m"; sourceTree = "<group>"; };
 		7D68C0B71853F43000425692 /* GPContentItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPContentItemViewController.h; sourceTree = "<group>"; };
 		7D68C0B81853F43000425692 /* GPContentItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPContentItemViewController.m; sourceTree = "<group>"; };
-		7D68C0BA1853F4A400425692 /* GPScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPScore.h; sourceTree = "<group>"; };
-		7D68C0BB1853F4A400425692 /* GPScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPScore.m; sourceTree = "<group>"; };
 		7D68C0BD1853F7C600425692 /* GPQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPQuiz.h; sourceTree = "<group>"; };
 		7D68C0BE1853F7C600425692 /* GPQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPQuiz.m; sourceTree = "<group>"; };
 		7D68C0C01853F84300425692 /* GPQuizResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPQuizResultsViewController.h; sourceTree = "<group>"; };
@@ -82,6 +81,8 @@
 		7DAA61751836B78A001AFBDF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DAA61791836BA45001AFBDF /* GPLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLandingViewController.h; sourceTree = "<group>"; };
 		7DAA617A1836BA45001AFBDF /* GPLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLandingViewController.m; sourceTree = "<group>"; };
+		7F4327731860A36900919B18 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7F4327761860A3B600919B18 /* GPCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPCoreData.xcdatamodel; sourceTree = "<group>"; };
 		7FB6CE01185A4911000B4327 /* GPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRootViewController.h; sourceTree = "<group>"; };
 		7FB6CE02185A4911000B4327 /* GPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRootViewController.m; sourceTree = "<group>"; };
 		7FB6CE05185A7EE1000B4327 /* NSMutableArray_Shuffling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableArray_Shuffling.h; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4327741860A36900919B18 /* CoreData.framework in Frameworks */,
 				7D7797F118580338002241FD /* AVFoundation.framework in Frameworks */,
 				7DAA61411836B55A001AFBDF /* UIKit.framework in Frameworks */,
 				7DAA61431836B55A001AFBDF /* Foundation.framework in Frameworks */,
@@ -115,7 +117,6 @@
 		7DAA61341836B559001AFBDF = {
 			isa = PBXGroup;
 			children = (
-				7D7797F018580338002241FD /* AVFoundation.framework */,
 				7D68C0B21853E67600425692 /* Default-Landscape@2x~ipad.png */,
 				7D68C0B01853E67000425692 /* Default-Landscape~ipad.png */,
 				7DAA61461836B55A001AFBDF /* Gone Phishing */,
@@ -135,6 +136,8 @@
 		7DAA613F1836B55A001AFBDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D7797F018580338002241FD /* AVFoundation.framework */,
+				7F4327731860A36900919B18 /* CoreData.framework */,
 				7DAA61401836B55A001AFBDF /* UIKit.framework */,
 				7DAA61421836B55A001AFBDF /* Foundation.framework */,
 				7DAA61441836B55A001AFBDF /* CoreGraphics.framework */,
@@ -199,6 +202,7 @@
 		7DAA61651836B74E001AFBDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F4327751860A3B600919B18 /* GPCoreData.xcdatamodeld */,
 				7D7797EB1857F934002241FD /* Komika_Hand.ttf */,
 				7D7797E91857F91C002241FD /* instructions.wav */,
 				7DAA61661836B74E001AFBDF /* Images */,
@@ -228,8 +232,6 @@
 		7FB6CE04185A6130000B4327 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7D68C0BA1853F4A400425692 /* GPScore.h */,
-				7D68C0BB1853F4A400425692 /* GPScore.m */,
 				7D68C0BD1853F7C600425692 /* GPQuiz.h */,
 				7D68C0BE1853F7C600425692 /* GPQuiz.m */,
 			);
@@ -349,8 +351,8 @@
 				7DAA617B1836BA45001AFBDF /* GPLandingViewController.m in Sources */,
 				7D68C0B61853EF7100425692 /* UIImage+JTKGradient.m in Sources */,
 				7FB6CE03185A4911000B4327 /* GPRootViewController.m in Sources */,
+				7F4327771860A3B600919B18 /* GPCoreData.xcdatamodeld in Sources */,
 				7D68C0B91853F43000425692 /* GPContentItemViewController.m in Sources */,
-				7D68C0BC1853F4A400425692 /* GPScore.m in Sources */,
 				7D68C0BF1853F7C600425692 /* GPQuiz.m in Sources */,
 				7FB6CE07185A7EE1000B4327 /* NSMutableArray_Shuffling.m in Sources */,
 				7D68C0C21853F84300425692 /* GPQuizResultsViewController.m in Sources */,
@@ -478,6 +480,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F4327751860A3B600919B18 /* GPCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F4327761860A3B600919B18 /* GPCoreData.xcdatamodel */,
+			);
+			currentVersion = 7F4327761860A3B600919B18 /* GPCoreData.xcdatamodel */;
+			path = GPCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7DAA61351836B559001AFBDF /* Project object */;
 }
